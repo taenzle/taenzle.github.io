@@ -1,105 +1,130 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 1%;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
 }
 
 header .logo img {
-    height: 40px;
+  height: 40px;
 }
 
 header nav img {
-    height: 30px;
+  height: 30px;
 }
 
+/* INTRO */
 .intro {
-    display: flex;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
+
+
 
 .intro img {
-    /* border-radius: 50%; */
-    width: 150px;
-    margin-right: 25%;
+  display: block;
+  width: 25%;
 }
 
 .intro-text {
-    max-width: 45%;
+  max-width: 300px;
+  padding: 5% 5% 5%;
 }
 
 .intro-text h1 {
-    margin: 0;
-    font-size: 2.5em;
+  margin: 0;
+  font-size: 2.5em;
 }
 
 .intro-text p {
-    margin: 10px 0;
+  min-width: auto;
 }
 
 .intro-text button {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .intro {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .intro-text {
+    flex-direction: column;
+    align-self: center;
+    min-width: 95vw;
+
+  }
+  .intro img {
+    width: 95vw;
+    margin:auto;
+  }
+}
+
+/* OFFER */
 .offer {
-    padding: 20px;
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .offer h2 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .offer-items {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .offer-item {
-    max-width: 300px;
-    text-align: center;
+  max-width: 300px;
+  text-align: center;
 }
 
 .offer-item img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
-
+/* IMPRESSIONS */
 .impressions {
-    padding: 20px;
+  padding: 20px;
 }
 
 .impressions h2 {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .impressions-items {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .impression-item {
-    max-width: 200px;
-    text-align: center;
-    margin-bottom: 20px;
+  max-width: 200px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .impression-item img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
