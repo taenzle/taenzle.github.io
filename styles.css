@@ -19,14 +19,15 @@ header {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 40px 40px ;
+  padding: 50px 50px ;
 }
 
 header .logo img {
-  height: 40px;
+  height: 68px;
+  border-radius: 50%;
 }
 
-.socials img {
+header .socials img {
   height: 30px;
 }
 
@@ -34,12 +35,12 @@ header .logo img {
 .intro {
   display: flex;
   justify-content: center;
-  padding: 5% 5%;
+  padding: 2% 5%;
 }
 
 .title-image {
   display: flex;
-  gap: 40px;
+  gap: 80px;
   width: 95vw;
 }
 
@@ -48,8 +49,7 @@ header .logo img {
   margin-left: auto;
   width: 50%;
   max-width: 650px;
-  object-fit: cover;
-  object-position: top;
+  object-position: center;
   /* max-height: 80vw; */
 }
 
@@ -70,6 +70,7 @@ header .logo img {
 
 .intro-text p {
   text-align: left;
+  max-width: 90%;
 }
 
 .intro-text .front-buttons {
@@ -101,15 +102,18 @@ header .logo img {
   .title-image {
     flex-direction: column;
     justify-items: center;
+    gap: 30px
   }
   .intro-text {
     flex-direction: column;
-    margin: auto;
-    min-width: 95vw;
+    /* margin: auto; */
+    margin-right: 0px;
+    width: 100%;
   }
   .intro img {
-    margin: auto;
-    min-width: 95vw;
+    width: 100%;
+    margin-left: 0px;
+    /* min-width: 95vw; */
   }
 }
 
