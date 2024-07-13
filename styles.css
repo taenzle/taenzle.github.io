@@ -1,8 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 section {
@@ -10,71 +14,102 @@ section {
 }
 
 header {
+  font-size: 2rem;
   display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #f8f8f8;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 40px ;
 }
 
 header .logo img {
   height: 40px;
 }
 
-header nav img {
+.socials img {
   height: 30px;
 }
 
 /* INTRO */
 .intro {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  padding: 5% 5%;
 }
 
+.title-image {
+  display: flex;
+  gap: 40px;
+  width: 95vw;
+}
 
 
 .intro img {
-  display: block;
-  width: 25%;
+  margin-left: auto;
+  width: 50%;
+  max-width: 650px;
+  object-fit: cover;
+  object-position: top;
+  /* max-height: 80vw; */
 }
 
 .intro-text {
-  max-width: 300px;
-  padding: 5% 5% 5%;
+  flex-direction: column;
+  align-items: center;
+  margin-right: auto;
+  /* padding: 2rem; */
+  width: 50%;
+  max-width: 650px;
+  text-align: left;
 }
 
 .intro-text h1 {
   margin: 0;
-  font-size: 2.5em;
+  font-size: xx-large;
 }
 
 .intro-text p {
-  min-width: auto;
+  text-align: left;
+}
+
+.intro-text .front-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px
 }
 
 .intro-text button {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
   cursor: pointer;
+  border: none;
+  background-color: #1e1e1e;
+  padding: 10px 20px;
+  color: #fff;
+}
+.intro-text button:hover {
+
+  background-color: #000;
+
 }
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 800px) {
   .intro {
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
+  }
+  .title-image {
+    flex-direction: column;
+    justify-items: center;
   }
   .intro-text {
     flex-direction: column;
-    align-self: center;
+    margin: auto;
     min-width: 95vw;
-
   }
   .intro img {
-    width: 95vw;
-    margin:auto;
+    margin: auto;
+    min-width: 95vw;
   }
 }
 
@@ -84,8 +119,8 @@ header nav img {
 }
 
 .offer h2 {
-  text-align: center;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .offer-items {
@@ -108,20 +143,20 @@ header nav img {
 }
 
 .impressions h2 {
-  text-align: center;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .impressions-items {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .impression-item {
+  margin-bottom: 20px;
   max-width: 200px;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .impression-item img {
