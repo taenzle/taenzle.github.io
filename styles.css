@@ -141,11 +141,11 @@ header .socials img {
 }
 .uebermich img {
   border-radius: 50%;
-  height: 250px;
+  width: clamp(50px, 55%, 175px);
 }
 .uebermich h2 {
-  max-width: max-content;
-  font-size: 4em;
+  min-width: max-content;
+  font-size: clamp(2rem, -0.5rem + 4vw, 3.5rem);
 }
 .uebermich-cv {
   display: flex;
@@ -167,13 +167,16 @@ header .socials img {
   padding: 0% 2rem;
   width: 100vw;
 }
-.cv-column ul,
-.cv-column h3 {
+.cv-column ul {
+  padding-left: 2rem;
+  margin-bottom: 0%;
   width: 75%;
   max-width: 400px;
 }
 .cv-column h3 {
   margin-bottom: 0%;
+  width: 75%;
+  max-width: 400px;
 }
 .cv-column li {
   padding: 2%;
@@ -189,26 +192,30 @@ header .socials img {
   );
 }
 /* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .uebermich-portrait {
     width: 100%;
+    align-items: center;
+  }
+  .uebermich-portrait h2 {
+    align-self: center;
   }
   .uebermich-cv {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, var(--taenzle-pink) 45%, white);
-    height: 100vw;
+    background-color: var(--taenzle-pink);
   }
   .cv-column {
-    display: inline;
+    align-items: center;
+    flex-direction: column;
     margin: 0px 0px;
-    /* background-cjolor: rgba(198, 166, 166, 0.5); */
     background: none;
     width: 100%;
     height: 100%;
   }
   .cv-column + .cv-column {
     background: none;
+    align-items: center;
   }
 }
