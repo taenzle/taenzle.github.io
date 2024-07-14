@@ -1,5 +1,11 @@
+:root {
+  --taenzle-pink: rgba(39, 33, 33, 0.226);
+}
 * {
   box-sizing: border-box;
+}
+html {
+  height:100%j;
 }
 
 body {
@@ -117,46 +123,92 @@ header .socials img {
 
 /* UEBERMICH */
 .uebermich {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.uebermich::after {
+  content: "";
+  height: 100vw;
+  width: 100%;
+  background-color: var(--taenzle-pink);
+}
+.uebermich-portrait {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: center;
+}
+.uebermich img {
+  border-radius: 50%;
+  height: 250px;
+}
+.uebermich h2 {
+  max-width: max-content;
+  font-size: 4em;
+}
+.uebermich-cv {
   display: flex;
   justify-content: space-evenly;
   margin: 0% 0%;
   padding: 0% 0%;
+  font-size: large;
 }
 .cv-column {
-  display: flex;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   margin-left: auto;
-  /* background-color: rgba(0.5, 0.5, 0.5, 0.2); */
-  background: linear-gradient(to left, rgba(198, 166, 166, 0.5) 60%, rgba(0,0,0,0));
-  padding: 0% 5rem;
+  background: linear-gradient(
+    to left,
+    var(--taenzle-pink) 60%,
+    rgba(0, 0, 0, 0)
+  );
+  padding: 0% 2rem;
   width: 100vw;
-  max-width: 900px;
-  height: 100vw;
 }
 .cv-column ul,
 .cv-column h3 {
   width: 75%;
-  max-width: 300px;
+  max-width: 400px;
+}
+.cv-column h3 {
+  margin-bottom: 0%;
+}
+.cv-column li {
+  padding: 2%;
 }
 .cv-column + .cv-column {
   align-items: flex-start;
   margin-right: auto;
   margin-left: 0px;
-  background-color: rgba(198, 166, 166, 0.2);
-  background: linear-gradient(to right, rgba(198, 166, 166, 0.5) 60%, rgba(0,0,0,0));
+  background: linear-gradient(
+    to right,
+    var(--taenzle-pink) 60%,
+    rgba(0, 0, 0, 0)
+  );
 }
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 800px) {
-  .uebermich {
+  .uebermich-portrait {
+    width: 100%;
+  }
+  .uebermich-cv {
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    display: block;
+    background: linear-gradient(to bottom, var(--taenzle-pink) 45%, white);
+    height: 100vw;
   }
   .cv-column {
+    display: inline;
+    margin: 0px 0px;
+    /* background-cjolor: rgba(198, 166, 166, 0.5); */
+    background: none;
     width: 100%;
     height: 100%;
-    background-color: rgba(198, 166, 166, 0.5);
-    margin: 0px 0px;
+  }
+  .cv-column + .cv-column {
+    background: none;
   }
 }
