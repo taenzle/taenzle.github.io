@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 html {
-  height:100%j;
+  height: 100%j;
 }
 
 body {
@@ -19,12 +19,15 @@ section {
   padding: 1%;
 }
 
+/* HEADER */
+
 header {
+  min-width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 50px 50px;
+  gap: 40px;
+  padding: 50px 0px;
   font-size: 2rem;
 }
 
@@ -33,8 +36,19 @@ header .logo img {
   height: 68px;
 }
 
-header .socials img {
-  height: 30px;
+.socials {
+  /* min-width: max-content; */
+  display: flex;
+  gap: 2px;
+}
+
+header .socials a {
+  display: flex;
+  align-items: center;
+  height: 2em;
+}
+header .socials a img {
+  height: 50%;
 }
 
 /* INTRO */
@@ -123,16 +137,16 @@ header .socials img {
 
 /* UEBERMICH */
 .uebermich {
-  padding: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0px;
 }
 .uebermich::after {
-  content: "";
-  height: 100vw;
-  width: 100%;
   background-color: var(--taenzle-pink);
+  width: 100%;
+  height: 100vw;
+  content: "";
 }
 .uebermich-portrait {
   display: inherit;
@@ -168,8 +182,8 @@ header .socials img {
   width: 100vw;
 }
 .cv-column ul {
-  padding-left: 2rem;
   margin-bottom: 0%;
+  padding-left: 2rem;
   width: 75%;
   max-width: 400px;
 }
@@ -194,28 +208,34 @@ header .socials img {
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 900px) {
   .uebermich-portrait {
-    width: 100%;
     align-items: center;
+    width: 100%;
   }
   .uebermich-portrait h2 {
     align-self: center;
   }
   .uebermich-cv {
-    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: var(--taenzle-pink);
+    width: 100%;
   }
   .cv-column {
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     margin: 0px 0px;
     background: none;
     width: 100%;
     height: 100%;
   }
   .cv-column + .cv-column {
-    background: none;
     align-items: center;
+    background: none;
+  }
+}
+@media (max-width: 360px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
   }
 }
