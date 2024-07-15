@@ -36,7 +36,6 @@ header {
   max-width: 1414px;
   align-items: center;
   padding: 30px 2%;
-  /* padding: 50px 0px; */
   font-size: 2rem;
 }
 
@@ -121,46 +120,6 @@ header .socials a img {
   background-color: #000;
 }
 
-/* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 800px) {
-  section {
-    padding-right: 7%;
-    padding-left: 7%;
-  }
-  body {
-    display: inline;
-  }
-  header {
-    justify-content: space-around;
-    min-width: unset;
-    padding-right: 5%;
-    padding-left: 5%;
-    width: 100vw;
-  }
-  .intro {
-    justify-content: center;
-    width: 100vw;
-  }
-  .title-image {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-  .intro-text {
-    flex-direction: column;
-    /* margin: auto; */
-    margin-right: 0px;
-    width: 100%;
-  }
-  .intro img {
-    margin-left: 0px;
-    width: 100%;
-    /* min-width: 95vw; */
-  }
-  header .logo img {
-    height: 68px;
-  }
-}
 
 /* UEBERMICH */
 .uebermich {
@@ -210,6 +169,7 @@ header .socials a img {
 .cv-column h3 {
   margin-bottom: 0%;
   width: 75%;
+  min-width: min-content;
   max-width: 400px;
 }
 .cv-column li {
@@ -219,39 +179,6 @@ header .socials a img {
   align-items: flex-start;
   margin-right: auto;
   margin-left: 0px;
-}
-/* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 900px) {
-  .uebermich-portrait {
-    align-items: center;
-    width: 100%;
-  }
-  .uebermich-portrait h2 {
-    align-self: center;
-  }
-  .uebermich-cv {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  .cv-column {
-    flex-direction: column;
-    align-items: center;
-    margin: 0px 0px;
-    background: none;
-    width: 100%;
-    height: 100%;
-  }
-  .cv-column + .cv-column {
-    align-items: center;
-    background: none;
-  }
-}
-@media (max-width: 360px) {
-  header {
-    flex-direction: column;
-    gap: 10px;
-  }
 }
 
 /* EINDRUECKE */
@@ -282,4 +209,76 @@ header .socials a img {
   object-fit: cover;
   object-position: center;
   aspect-ratio: 0.6;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  section {
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+  body {
+    display: inline;
+  }
+  header {
+    justify-content: space-between;
+    min-width: unset;
+    max-width: unset;
+    padding-right: 5%;
+    padding-left: 5%;
+    width: 100vw;
+  }
+  header .logo img {
+    height: 68px;
+  }
+  .intro {
+    justify-content: center;
+    width: 100vw;
+  }
+  .title-image {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .intro-text {
+    flex-direction: column;
+    /* margin: auto; */
+    margin-right: 0px;
+    width: 100%;
+  }
+  .intro img {
+    margin-left: 0px;
+    width: 100%;
+    /* min-width: 95vw; */
+  }
+  .uebermich-portrait {
+    align-items: center;
+    width: 100%;
+  }
+  .uebermich-portrait h2 {
+    align-self: center;
+  }
+  .uebermich-cv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .cv-column {
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0px;
+    background: none;
+    width: 100%;
+    height: 100%;
+  }
+  .cv-column + .cv-column {
+    align-items: center;
+    background: none;
+  }
+}
+@media (max-width: 360px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
