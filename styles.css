@@ -22,7 +22,7 @@ body {
 }
 
 section {
-  padding: 1%;
+  padding: 2% 10%;
 }
 
 /* HEADER */
@@ -30,12 +30,13 @@ section {
 header {
   display: flex;
   color: white;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 60%;
-  min-width: 900px;
-  max-width: 1300px;
+  min-width: 800px;
+  max-width: 1414px;
   align-items: center;
-  padding: 50px 0px;
+  padding: 30px 2%;
+  /* padding: 50px 0px; */
   font-size: 2rem;
 }
 
@@ -65,11 +66,6 @@ header .socials a img {
 }
 
 /* INTRO */
-.intro {
-  display: inline-block;
-  /* justify-content: center; */
-  padding: 2% 5%;
-}
 
 .title-image {
   display: flex;
@@ -128,8 +124,12 @@ header .socials a img {
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 800px) {
+  section {
+    padding-right: 7%;
+    padding-left: 7%;
+  }
   body {
-    display: block;
+    display: inline;
   }
   header {
     justify-content: space-around;
@@ -144,9 +144,8 @@ header .socials a img {
   }
   .title-image {
     flex-direction: column;
-    justify-items: center;
+    align-items: center;
     gap: 30px;
-    margin: 5%;
   }
   .intro-text {
     flex-direction: column;
@@ -166,7 +165,6 @@ header .socials a img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px;
 }
 .uebermich::after {
   width: 100%;
