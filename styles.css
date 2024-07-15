@@ -1,6 +1,6 @@
 :root {
   --taenzle-gray: rgb(103, 110, 120);
-  --taenzle-rose: hsl(344, 100%, 88%);
+  --taenzle-rose: rgb(255, 194, 210);
 }
 * {
   box-sizing: border-box;
@@ -10,6 +10,9 @@ html {
 }
 
 body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   background-color: var(--taenzle-gray);
   color: whitesmoke;
   box-sizing: border-box;
@@ -25,19 +28,24 @@ section {
 /* HEADER */
 
 header {
-  color: white;
-  min-width: fit-content;
   display: flex;
-  justify-content: center;
+  color: white;
+  justify-content: space-around;
+  width: 60%;
+  min-width: 900px;
+  max-width: 1300px;
   align-items: center;
-  gap: 40px;
   padding: 50px 0px;
   font-size: 2rem;
 }
 
+header b {
+  font-family: Geneva, Verdana, sans-serif;
+}
+
 header .logo img {
   border-radius: 50%;
-  height: 68px;
+  height: 100px;
 }
 
 .socials {
@@ -51,25 +59,28 @@ header .socials a {
   align-items: center;
   height: 2em;
 }
+
 header .socials a img {
   height: 50%;
 }
 
 /* INTRO */
 .intro {
-  display: flex;
-  justify-content: center;
+  display: inline-block;
+  /* justify-content: center; */
   padding: 2% 5%;
 }
 
 .title-image {
   display: flex;
   gap: 80px;
-  width: 95vw;
+  /* max-width: fit-content; */
+  /* width: 95vw; */
+
 }
 
 .intro img {
-  margin-left: auto;
+  /* margin-left: auto; */
   width: 50%;
   max-width: 650px;
   object-position: center;
@@ -79,7 +90,7 @@ header .socials a img {
 .intro-text {
   flex-direction: column;
   align-items: center;
-  margin-right: auto;
+  /* margin-right: auto; */
   /* padding: 2rem; */
   width: 50%;
   max-width: 650px;
@@ -117,8 +128,19 @@ header .socials a img {
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 800px) {
+  body {
+    display: block;
+  }
+  header {
+    justify-content: space-around;
+    min-width: unset;
+    padding-right: 5%;
+    padding-left: 5%;
+    width: 100vw;
+  }
   .intro {
     justify-content: center;
+    width: 100vw;
   }
   .title-image {
     flex-direction: column;
