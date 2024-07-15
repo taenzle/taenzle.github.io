@@ -6,34 +6,15 @@
     <title>Tänzle</title>
     <link rel="icon" href="/img/logo/taenzle/taenzle_logo_small.png" />
     <link rel="stylesheet" href="/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      addEventListener("DOMContentLoaded", () => {
+        $("header").load("/header.html");
+      });
+    </script>
   </head>
   <body>
     <header>
-      <div class="logo">
-        <a href="/index.html">
-          <img
-            src="/img/logo/taenzle/taenzle_logo_small.png"
-            alt="Tänzle Logo"
-          />
-        </a>
-      </div>
-      <b>TÄNZLE</b>
-      <div class="socials">
-        <a
-          href="https://www.linkedin.com/in/alana-brown-67a308263/"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><img src="img/logo/linkedin/LI-In-Bug.png" alt="Instagram"
-        /></a>
-        <a
-          href="https://www.instagram.com/taenzle_/"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><img
-            src="img/logo/instagram/01 Static Glyph/03 Black Glyph/Instagram_Glyph_Black.svg"
-            alt="Instagram"
-        /></a>
-      </div>
     </header>
 
     <section class="intro">
@@ -53,7 +34,9 @@
           <p>Mit Tänzle möchte ich genau das tun!</p>
           <div class="front-buttons">
             <a href="/html/uebermich.html" class="front-button">Über mich</a>
-            <a href="/html/uebermich.html" class="front-button">Meine Angebote</a>
+            <a href="/html/uebermich.html" class="front-button"
+              >Meine Angebote</a
+            >
             <a href="/html/uebermich.html" class="front-button">Eindrücke</a>
             <a href="/html/uebermich.html" class="front-button">E-Mail</a>
           </div>

@@ -6,43 +6,18 @@
     <title>Tänzle</title>
     <link rel="icon" href="img/logo/taenzle/taenzle_logo_small.png" />
     <link rel="stylesheet" href="../styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      addEventListener("DOMContentLoaded", () => {
+        $("header").load("/header.html");
+      });
+    </script>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <a href="/index.html">
-          <img
-            src="/img/logo/taenzle/taenzle_logo_small.png"
-            alt="Tänzle Logo"
-          />
-        </a>
-      </div>
-      <b>TÄNZLE</b>
-      <!-- <a href="/html/uebermich.html" class="front-button">Über mich</a> -->
-      <!-- <a href="/html/uebermich.html" class="front-button">Meine Angebote</a> -->
-      <!-- <a href="/html/uebermich.html" class="front-button">Eindrücke</a> -->
-      <!-- <a href="/html/uebermich.html" class="front-button">E-Mail</a> -->
-      <div class="socials">
-        <a
-          href="https://www.linkedin.com/in/alana-brown-67a308263/"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><img src="/img/logo/linkedin/LI-In-Bug.png" alt="Instagram"
-        /></a>
-        <a
-          href="https://www.instagram.com/taenzle_/"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><img
-            src="/img/logo/instagram/01 Static Glyph/03 Black Glyph/Instagram_Glyph_Black.svg"
-            alt="Instagram"
-        /></a>
-      </div>
-    </header>
-
+    <header></header>
     <section class="uebermich">
       <div class="uebermich-portrait">
-        <img src="/img/uebermich/uebermich-portrait_small.jpg" alt="">
+        <img src="/img/uebermich/uebermich-portrait_small.jpg" alt="" />
         <h2>Alana Brown</h2>
       </div>
       <div class="uebermich-cv">
@@ -70,6 +45,5 @@
         </div>
       </div>
     </section>
-
   </body>
 </html>
