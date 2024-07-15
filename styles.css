@@ -69,23 +69,17 @@ header .socials a img {
 .title-image {
   display: flex;
   gap: 80px;
-  /* max-width: fit-content; */
-  /* width: 95vw; */
 }
 
 .intro img {
-  /* margin-left: auto; */
   width: 50%;
   max-width: 650px;
   object-position: center;
-  /* max-height: 80vw; */
 }
 
 .intro-text {
   flex-direction: column;
   align-items: center;
-  /* margin-right: auto; */
-  /* padding: 2rem; */
   width: 50%;
   max-width: 650px;
   text-align: left;
@@ -242,14 +236,12 @@ header .socials a img {
   }
   .intro-text {
     flex-direction: column;
-    /* margin: auto; */
     margin-right: 0px;
     width: 100%;
   }
   .intro img {
     margin-left: 0px;
     width: 100%;
-    /* min-width: 95vw; */
   }
   .uebermich-portrait {
     align-items: center;
