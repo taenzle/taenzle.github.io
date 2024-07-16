@@ -22,7 +22,7 @@ body {
 }
 
 section {
-  padding: 2% 10%;
+  padding: 30px 10%;
 }
 
 /* HEADER */
@@ -148,10 +148,11 @@ nav {
   transform: scale(0, 1);
   transition: transform 400ms ease-in-out;
 }
+.front-buttons a:hover {
+  color: var(--taenzle-rose);
+  transition: color 400ms ease-in-out;
+}
 
-/* .front-button:hover { */
-/*   color: var(--taenzle-rose); */
-/* } */
 .front-button:hover::after {
   transform: scale(1, 1);
 }
@@ -304,6 +305,26 @@ nav {
   .front-buttons {
     justify-content: space-evenly;
     gap: 3vw;
+  }
+  .front-buttons a::after {
+    all: unset;
+  }
+  .front-buttons::before {
+    display: block;
+    min-height: 2px;
+    background-color: var(--taenzle-rose);
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0px 2%;
+    transform: scale(1, 1);
+    transition: transform 400ms ease-in-out;
+  }
+
+  .front-button:hover::after {
+    all: unset;
   }
 
   header .logo img {
