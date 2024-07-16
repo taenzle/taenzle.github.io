@@ -49,6 +49,8 @@ header b {
 
 header .logo {
   height: fit-content;
+  border-radius: 50%;
+  width: 100px;
 }
 header .logo img {
   border-radius: 50%;
@@ -151,7 +153,7 @@ nav {
 /*   color: var(--taenzle-rose); */
 /* } */
 .front-button:hover::after {
-  transform: scale(1,1);
+  transform: scale(1, 1);
 }
 
 /* UEBERMICH */
@@ -242,7 +244,11 @@ nav {
   object-position: center;
 }
 
+/* ANGEBOTE */
+
+/********************************************************************************/
 /* Responsive layout - makes a one column layout instead of a two-column layout */
+/********************************************************************************/
 @media (max-width: 800px) {
   section {
     padding-right: 7%;
@@ -330,6 +336,35 @@ nav {
     align-items: center;
     background: none;
   }
+  /* ANGEBOTE */
+
+  .angebote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .angebote h2 {
+    align-self: flex-start;
+    font-size: 2rem;
+  }
+  .angebot {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .angebot img {
+    max-width: 100%;
+  }
+  .angebot p {
+    margin-top: 3%;
+  }
+  .angebot ul {
+    padding-left: 1.5rem;
+  }
+  .angebot li {
+    margin-bottom: 5px;
+  }
 }
 @media (max-width: 380px) {
   header {
@@ -344,7 +379,7 @@ nav {
     display: block;
   }
   nav {
-    top: 55px
+    top: 55px;
   }
   .front-buttons {
     justify-content: space-around;
