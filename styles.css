@@ -245,6 +245,34 @@ nav {
 }
 
 /* ANGEBOTE */
+.angebote > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3vw;
+}
+.angebote h2 {
+  font-size: 3rem;
+  margin: 3% 0;
+}
+
+.angebot {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.angebot img {
+  min-height: 50%;
+  max-height: 50%;
+  width: 100%;
+  object-fit: cover;
+}
+.angebot p {
+  margin-top: 3%;
+  margin-bottom: 0%;
+}
+.angebot li {
+  margin-bottom: 5px;
+}
 
 /********************************************************************************/
 /* Responsive layout - makes a one column layout instead of a two-column layout */
@@ -274,7 +302,7 @@ nav {
     right: 0px;
   }
   .front-buttons {
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 3vw;
   }
 
@@ -338,13 +366,13 @@ nav {
   }
   /* ANGEBOTE */
 
-  .angebote {
+  .angebote > div {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
-  .angebote h2 {
+  .angebote > div h2 {
     align-self: flex-start;
     font-size: 2rem;
   }
