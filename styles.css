@@ -11,13 +11,13 @@ html {
 
 body {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  background-color: var(--taenzle-gray);
-  color: whitesmoke;
+  align-items: center;
   box-sizing: border-box;
   margin: 0;
+  background-color: var(--taenzle-gray);
   padding: 0;
+  color: whitesmoke;
   font-family: Arial, sans-serif;
 }
 
@@ -29,20 +29,27 @@ section {
 
 header {
   display: flex;
-  color: white;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 2% 50px;
   width: 60%;
   min-width: 800px;
-  max-width: 1414px;
-  align-items: center;
-  padding: 30px 2%;
+  max-width: 1080px;
+  color: whitesmoke;
   font-size: 2rem;
+}
+
+.schriftzug {
+  bottom: 10px;
 }
 
 header b {
   font-family: Geneva, Verdana, sans-serif;
 }
 
+header .logo {
+  height: fit-content;
+}
 header .logo img {
   border-radius: 50%;
   height: 100px;
@@ -51,13 +58,16 @@ header .logo img {
 .socials {
   /* min-width: max-content; */
   display: flex;
+  justify-content: center;
   gap: 2px;
+  width: 100px;
 }
 
 header .socials a {
   display: flex;
   align-items: center;
   height: 2em;
+  object-fit: cover;
 }
 
 header .socials a img {
@@ -95,31 +105,61 @@ header .socials a img {
   text-align: left;
 }
 
-.intro-text .front-buttons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px;
+nav {
+  width: 450px;
+  position: absolute;
+  top: 130px;
 }
 
-.front-button {
+.schriftzug {
+  text-align: center;
+}
+
+.front-buttons {
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  padding-left: 0px;
+  list-style: none;
+  flex-direction: row;
+}
+
+.front-buttons a {
+  position: relative;
   cursor: pointer;
-  border: none;
-  background-color: #1e1e1e;
-  padding: 15px 20px;
-  color: #fff;
+  color: whitesmoke;
+  font-size: large;
   text-decoration: none;
 }
-.intro-text button:hover {
-  background-color: #000;
+
+.front-buttons a::after {
+  display: block;
+  min-height: 2px;
+  background-color: var(--taenzle-rose);
+  content: "";
+  position: relative;
+  top: 5px;
+  left: 0px;
+  right: 0px;
+  margin: 0px 2%;
+  transform: scale(0, 1);
+  transition: transform 400ms ease-in-out;
 }
 
+/* .front-button:hover { */
+/*   color: var(--taenzle-rose); */
+/* } */
+.front-button:hover::after {
+  transform: scale(1,1);
+}
 
 /* UEBERMICH */
 .uebermich {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 100vw;
 }
 .uebermich::after {
   width: 100%;
@@ -147,12 +187,11 @@ header .socials a img {
   font-size: large;
 }
 .cv-column {
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-left: auto;
   padding: 0% 2rem;
-  width: 100vw;
 }
 .cv-column ul {
   margin-bottom: 0%;
@@ -171,8 +210,6 @@ header .socials a img {
 }
 .cv-column + .cv-column {
   align-items: flex-start;
-  margin-right: auto;
-  margin-left: 0px;
 }
 
 /* EINDRUECKE */
@@ -198,11 +235,11 @@ header .socials a img {
   object-fit: cover;
 }
 .gallery figure img {
+  aspect-ratio: 0.6;
   width: 100%;
   max-height: 500px;
   object-fit: cover;
   object-position: center;
-  aspect-ratio: 0.6;
 }
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
@@ -216,14 +253,37 @@ header .socials a img {
   }
   header {
     justify-content: space-between;
+    align-items: center;
+    padding-right: 5%;
+    width: 100vw;
     min-width: unset;
     max-width: unset;
-    padding-right: 5%;
-    padding-left: 5%;
-    width: 100vw;
   }
+  nav {
+    all: unset;
+    position: absolute;
+    top: 100px;
+    max-width: 100vw;
+    left: 0px;
+    right: 0px;
+  }
+  .front-buttons {
+    justify-content: center;
+    gap: 3vw;
+  }
+
   header .logo img {
-    height: 68px;
+    align-self: baseline;
+    height: 64px;
+  }
+  .socials {
+    min-width: 64px;
+  }
+  .socials img {
+    max-height: 2rem;
+  }
+  .socials a {
+    align-items: none;
   }
   .intro {
     justify-content: center;
@@ -258,19 +318,41 @@ header .socials a img {
   .cv-column {
     flex-direction: column;
     align-items: center;
-    padding: 0px 0px;
     background: none;
+    padding: 0px 0px;
     width: 100%;
     height: 100%;
+  }
+  .cv-column ul {
+    min-width: 100%;
   }
   .cv-column + .cv-column {
     align-items: center;
     background: none;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 380px) {
   header {
-    flex-direction: column;
+    flex-direction: row;
+    padding: 2% 2% 70px;
     gap: 10px;
+  }
+  .logo {
+    display: none;
+  }
+  header .schriftzug {
+    display: block;
+  }
+  nav {
+    top: 55px
+  }
+  .front-buttons {
+    justify-content: space-around;
+  }
+  .front-buttons a {
+    font-size: small;
+  }
+  .socials {
+    max-width: fit-content;
   }
 }
