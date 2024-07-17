@@ -82,6 +82,42 @@ header .socials a img {
   height: 50%;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 2% 50px;
+}
+blockquote {
+  padding: unset;
+  font-style: italic;
+  font-size: 2.2em;
+  position: relative;
+  padding: 50px 90px;
+}
+
+blockquote::before {
+  content: "«";
+  position: absolute;
+  left: -20px;
+  bottom: 20px;
+}
+
+blockquote::after {
+  content: "»";
+  right: -20px;
+  top: 00px;
+}
+
+blockquote::before,
+blockquote::after {
+  color: var(--taenzle-rose);
+  line-height: 1.618;
+  font-size: 3em;
+  text-align: center;
+  position: absolute;
+}
+
 /* INTRO */
 
 .title-image {
