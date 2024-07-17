@@ -82,6 +82,51 @@ header .socials a img {
   height: 50%;
 }
 
+.schriftzug {
+  text-align: center;
+}
+
+.front-buttons {
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 0px;
+  padding-left: 0px;
+  list-style: none;
+  flex-direction: row;
+}
+
+.front-buttons a {
+  font-size: clamp(1rem, 2vw, 2rem);
+  position: relative;
+  cursor: pointer;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.front-buttons a::after {
+  display: block;
+  min-height: 2px;
+  background-color: var(--taenzle-rose);
+  content: "";
+  position: relative;
+  top: 5px;
+  left: 0px;
+  right: 0px;
+  margin: 0px 2%;
+  transform: scale(0, 1);
+  transition: transform 400ms ease-in-out;
+}
+.front-buttons a:hover {
+  color: var(--taenzle-rose);
+  transition: color 400ms ease-in-out;
+}
+
+.front-button:hover::after {
+  transform: scale(1, 1);
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -150,49 +195,26 @@ blockquote::after {
   font-size: 1.3rem;
 }
 
-.schriftzug {
-  text-align: center;
+.kontakt {
+  font-size: 1.1rem;
+  text-align: end;
 }
-
-.front-buttons {
-  white-space: nowrap;
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  margin: 0px;
-  padding-left: 0px;
+.kontakt h2 {
+  margin-bottom: 0px;
+}
+.kontakt ul {
   list-style: none;
-  flex-direction: row;
+  padding-left: 0px;
 }
-
-.front-buttons a {
-  font-size: clamp(1rem, 2vw, 2rem);
-  position: relative;
-  cursor: pointer;
-  color: whitesmoke;
+.kontakt ul li {
+  padding-bottom: 5px;
+}
+.kontakt ul li a {
   text-decoration: none;
+  color: whitesmoke;
 }
-
-.front-buttons a::after {
-  display: block;
-  min-height: 2px;
-  background-color: var(--taenzle-rose);
-  content: "";
-  position: relative;
-  top: 5px;
-  left: 0px;
-  right: 0px;
-  margin: 0px 2%;
-  transform: scale(0, 1);
-  transition: transform 400ms ease-in-out;
-}
-.front-buttons a:hover {
-  color: var(--taenzle-rose);
-  transition: color 400ms ease-in-out;
-}
-
-.front-button:hover::after {
-  transform: scale(1, 1);
+.kontakt ul li a:hover {
+  text-decoration: underline;
 }
 
 /* UEBERMICH */
