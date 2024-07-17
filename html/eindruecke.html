@@ -13,30 +13,39 @@
       });
     </script>
     <script>
-      addEventListener("DOMContentLoaded", () => {
+      const add_to_gallery = (eindruecke) => {
         let gallery = document.getElementById("gallery");
         let template = document.querySelector("#eindruck-template");
-        for (const i in ["test", "hallo"]) {
+        for (const e of eindruecke) {
           let clone = template.content.cloneNode(true);
-          console.log(clone);
-          clone.querySelector(".eindruck-titel").textContent = "hahlhlhlh";
-          clone.querySelector("img").src = "/img/lorem/0.png";
+          clone.querySelector(".eindruck-titel").textContent = e["text"];
+          clone.querySelector("img").src = e["image"];
+          clone.querySelector(".eindruck-datum").textContent = e["date"];
           gallery.appendChild(clone);
         }
-      });
+      };
+
+      fetch("/eindruecke.json")
+        .then((res) => {
+          return res.text();
+        })
+        .then((eindruecke) => {
+          const e = JSON.parse(eindruecke);
+          return add_to_gallery(e);
+        });
     </script>
   </head>
   <body>
-    <header>
-    </header>
+    <header></header>
 
     <section class="eindruecke">
+      <h2>Eindrücke</h2>
       <div class="gallery" id="gallery">
         <template id="eindruck-template">
           <figure>
             <figcaption>
               <h3 class="eindruck-titel"></h3>
-              <span class="eindruck-datum"></span>
+              <p class="eindruck-datum"></p>
             </figcaption>
             <img src="" />
           </figure>

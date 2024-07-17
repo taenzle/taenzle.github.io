@@ -29,14 +29,18 @@ section {
 
 header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   padding: 30px 2% 50px;
-  width: 60%;
-  min-width: 800px;
-  max-width: 1080px;
+  width: 100%;
+  max-width: 1440px;
   color: whitesmoke;
   font-size: 2rem;
+}
+
+
+h2 {
+  font-size: 3rem;
 }
 
 .schriftzug {
@@ -44,7 +48,11 @@ header {
 }
 
 header b {
+  position: relative;
+  font-size: 3rem;
+  align-self: baseline;
   font-family: Geneva, Verdana, sans-serif;
+  bottom: 3px;
 }
 
 header .logo {
@@ -107,12 +115,6 @@ header .socials a img {
   text-align: left;
 }
 
-nav {
-  width: 450px;
-  position: absolute;
-  top: 130px;
-}
-
 .schriftzug {
   text-align: center;
 }
@@ -121,6 +123,7 @@ nav {
   white-space: nowrap;
   display: flex;
   justify-content: space-between;
+  gap: 10px;
   margin: 0px;
   padding-left: 0px;
   list-style: none;
@@ -128,10 +131,10 @@ nav {
 }
 
 .front-buttons a {
+  font-size: 2rem;
   position: relative;
   cursor: pointer;
   color: whitesmoke;
-  font-size: large;
   text-decoration: none;
 }
 
@@ -217,28 +220,26 @@ nav {
 
 /* EINDRUECKE */
 .eindruecke {
-  background-color: yellow;
+  padding-left: 2%;
+  padding-right: 2%;
+  max-width: 1440px;
 }
 
 .gallery {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: safe;
-  background-color: aqua;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2%;
 }
 .gallery figure {
+  min-height: auto;
   display: flex;
+  margin: 0;
   flex-direction: column;
   justify-content: space-between;
-  background-color: red;
-  min-width: 0px;
-  max-width: 330px;
   object-fit: cover;
 }
 .gallery figure img {
-  aspect-ratio: 0.6;
+  aspect-ratio: 0.8;
   width: 100%;
   max-height: 500px;
   object-fit: cover;
@@ -252,11 +253,12 @@ nav {
   column-gap: 3vw;
 }
 .angebote h2 {
-  font-size: 3rem;
   margin: 3% 0;
 }
 
 .angebot {
+  min-width: none;
+  min-height: none;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -278,7 +280,7 @@ nav {
 /********************************************************************************/
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 /********************************************************************************/
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   section {
     padding-right: 7%;
     padding-left: 7%;
@@ -333,7 +335,7 @@ nav {
     height: 64px;
   }
   .socials {
-    min-width: 64px;
+    max-width: 63px;
   }
   .socials img {
     max-height: 2rem;
@@ -396,7 +398,6 @@ nav {
   }
   .angebote > div h2 {
     align-self: flex-start;
-    font-size: 2rem;
   }
   .angebot {
     display: flex;
