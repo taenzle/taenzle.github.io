@@ -131,7 +131,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 2% 50px;
+  padding: 100px 2% 50px;
 }
 blockquote {
   padding: unset;
@@ -173,7 +173,10 @@ blockquote::after {
 .intro img {
   width: 50%;
   max-width: 650px;
-  object-position: center;
+}
+
+.intro #intro-portrait {
+  border: 50px solid whitesmoke;
 }
 
 .intro-text {
