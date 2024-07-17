@@ -48,8 +48,7 @@ h2 {
 
 header b {
   position: relative;
-  font-size: 3rem;
-  align-self: baseline;
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-family: Geneva, Verdana, sans-serif;
   bottom: 3px;
 }
@@ -105,13 +104,14 @@ header .socials a img {
 }
 
 .intro-text h1 {
-  margin: 0;
-  font-size: xx-large;
+  font-size: clamp(64px, 4vw, 96px);
+  margin: 10% 0%;
 }
 
 .intro-text p {
   max-width: 90%;
   text-align: left;
+  font-size: 1.3rem;
 }
 
 .schriftzug {
@@ -130,7 +130,7 @@ header .socials a img {
 }
 
 .front-buttons a {
-  font-size: 2rem;
+  font-size: clamp(1rem, 2vw, 2rem);
   position: relative;
   cursor: pointer;
   color: whitesmoke;
@@ -211,7 +211,7 @@ header .socials a img {
   max-width: 400px;
 }
 .cv-column li {
-  padding: 2%;
+  padding: 0.5rem;
 }
 .cv-column + .cv-column {
   align-items: flex-start;
@@ -237,6 +237,14 @@ header .socials a img {
   flex-direction: column;
   justify-content: space-between;
   object-fit: cover;
+  font-size: large;
+}
+
+.gallery figure figcaption {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .gallery figure img {
   aspect-ratio: 0.8;
@@ -244,6 +252,13 @@ header .socials a img {
   max-height: 500px;
   object-fit: cover;
   object-position: center;
+}
+
+.eindruck-titel {
+  margin: 0px;
+}
+.eindruck-datum {
+  margin-top: 0px;
 }
 
 /* ANGEBOTE */
@@ -297,6 +312,10 @@ header .socials a img {
     min-width: unset;
     max-width: unset;
   }
+  header b {
+    justify-self: initial;
+    bottom: 0px;
+  }
   nav {
     all: unset;
     position: absolute;
@@ -316,7 +335,7 @@ header .socials a img {
     all: unset;
   }
   .front-buttons a {
-    font-size: clamp(1.2rem, 4vw, 2rem);
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
   }
 
   header::after {
@@ -341,14 +360,13 @@ header .socials a img {
     max-width: 100px;
   }
   .socials img {
-    max-height: 2rem;
+    max-height: clamp(24px, 3vw, 32px);
   }
   .socials a {
     align-items: none;
   }
   .intro {
     justify-content: center;
-    width: 100vw;
   }
   .title-image {
     flex-direction: column;
@@ -359,6 +377,9 @@ header .socials a img {
     flex-direction: column;
     margin-right: 0px;
     width: 100%;
+  }
+  .intro-text h1 {
+    margin: 0px;
   }
   .intro img {
     margin-left: 0px;
@@ -377,12 +398,15 @@ header .socials a img {
     width: 100%;
   }
   .cv-column {
+    all: unset;
     flex-direction: column;
-    align-items: center;
     background: none;
     padding: 0px 0px;
     width: 100%;
     height: 100%;
+  }
+  .cv-column h3 {
+    max-width: unset;
   }
   .cv-column ul {
     min-width: 100%;
@@ -448,6 +472,6 @@ header .socials a img {
     max-width: fit-content;
   }
   .gallery {
-    grid-template-columns:  1fr;
+    grid-template-columns: 1fr;
   }
 }
