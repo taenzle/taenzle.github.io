@@ -540,8 +540,8 @@ blockquote::after {
     gap: 10px;
   }
   .logo img {
-    position: absolute;
-    top: 3px;
+    position: relative;
+    bottom: 6px;
   }
   header .schriftzug {
     display: block;
