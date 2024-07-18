@@ -34,7 +34,7 @@ header {
   align-items: center;
   padding: 30px 2% 50px;
   width: 100%;
-  max-width: 1440px;
+  max-width: 2000px;
   color: whitesmoke;
   font-size: 2rem;
 }
@@ -323,7 +323,6 @@ blockquote::after {
 
 /* ANGEBOTE */
 .angebote {
-
 }
 .angebote > div {
   display: grid;
@@ -402,6 +401,9 @@ blockquote::after {
   .front-buttons a {
     all: unset;
     font-size: clamp(1.2rem, 4vw, 1.5rem);
+  }
+  .front-buttons a::after {
+    display: none;
   }
   .front-button:hover::after {
     all: unset;
