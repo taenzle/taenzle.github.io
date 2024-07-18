@@ -23,6 +23,7 @@ body {
 
 section {
   padding: 30px 10%;
+  max-width: 2000px;
 }
 
 /* HEADER */
@@ -224,15 +225,13 @@ blockquote::after {
 
 /* UEBERMICH */
 .uebermich {
+  padding-left: 2%;
+  padding-right: 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 100vw;
 }
-.uebermich::after {
-  width: 100%;
-  content: "";
-}
+
 .uebermich-portrait {
   display: inherit;
   flex-direction: inherit;
@@ -251,7 +250,7 @@ blockquote::after {
   justify-content: space-evenly;
   margin: 0% 0%;
   padding: 0% 0%;
-  font-size: large;
+  font-size: 1.2rem;
 }
 .cv-column {
   width: 60%;
@@ -281,9 +280,8 @@ blockquote::after {
 
 /* EINDRUECKE */
 .eindruecke {
-  padding-left: 2%;
-  padding-right: 2%;
-  max-width: 1440px;
+  /* padding-left: 2%; */
+  /* padding-right: 2%; */
 }
 
 .gallery {
@@ -324,6 +322,9 @@ blockquote::after {
 }
 
 /* ANGEBOTE */
+.angebote {
+
+}
 .angebote > div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
