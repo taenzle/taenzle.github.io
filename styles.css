@@ -29,14 +29,19 @@ section {
 /* HEADER */
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 30px 2% 50px;
   width: 100%;
   max-width: 2000px;
   color: whitesmoke;
   font-size: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+nav {
+  grid-column: 2 / 4;
 }
 
 h2 {
@@ -57,14 +62,18 @@ header b {
 .logo {
   height: fit-content;
   border-radius: 50%;
-  width: 100px;
+  min-width: fit-content;
+  grid-column: 1;
 }
 .logo img {
-  height: 200px;
+  /* position: relative; */
+  height: calc(5px + 8vw);
+  max-height: 200px;
   /* background: whitesmoke; */
 }
 
 .socials {
+  grid-column: 4;
   /* min-width: max-content; */
   display: flex;
   justify-content: center;
@@ -322,8 +331,7 @@ blockquote::after {
 }
 
 /* ANGEBOTE */
-.angebote {
-}
+
 .angebote > div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
