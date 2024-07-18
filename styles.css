@@ -175,10 +175,6 @@ blockquote::after {
   max-width: 650px;
 }
 
-.intro #intro-portrait {
-  border: 50px solid whitesmoke;
-}
-
 .intro-text {
   flex-direction: column;
   align-items: center;
@@ -396,11 +392,12 @@ blockquote::after {
     gap: 3vw;
     text-align: center;
   }
+  .front-buttons a {
+    all: unset;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+  }
   .front-button:hover::after {
     all: unset;
-  }
-  .front-buttons a {
-    font-size: clamp(1.2rem, 4vw, 1.5rem);
   }
 
   header::after {
@@ -417,7 +414,7 @@ blockquote::after {
     /* transition: transform 400ms ease-in-out; */
   }
 
-   .logo img {
+  .logo img {
     align-self: baseline;
   }
   .socials {
@@ -435,6 +432,7 @@ blockquote::after {
     justify-content: center;
   }
   .title-image {
+    margin-top: 50px;
     flex-direction: column;
     align-items: center;
     gap: 30px;
@@ -452,6 +450,7 @@ blockquote::after {
     width: 100%;
   }
   .uebermich-portrait {
+    margin-top: 50px;
     align-items: center;
     width: 100%;
   }
@@ -510,7 +509,11 @@ blockquote::after {
     margin-bottom: 5px;
   }
   .gallery {
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery figure {
+    margin-bottom: 8%;
   }
 }
 @media (max-width: 380px) {
