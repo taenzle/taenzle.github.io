@@ -53,14 +53,14 @@ header b {
   bottom: 3px;
 }
 
-header .logo {
+.logo {
   height: fit-content;
   border-radius: 50%;
   width: 100px;
 }
-header .logo img {
-  border-radius: 50%;
-  height: 100px;
+.logo img {
+  height: 200px;
+  /* background: whitesmoke; */
 }
 
 .socials {
@@ -71,14 +71,14 @@ header .logo img {
   width: 100px;
 }
 
-header .socials a {
+.socials a {
   display: flex;
   align-items: center;
   height: 2em;
   object-fit: cover;
 }
 
-header .socials a img {
+.socials a img {
   height: 50%;
 }
 
@@ -376,6 +376,11 @@ blockquote::after {
     justify-self: initial;
     bottom: 0px;
   }
+  .logo img {
+    object-fit: cover;
+    max-height: 64px;
+    width: 200px;
+  }
   nav {
     all: unset;
     position: absolute;
@@ -412,15 +417,16 @@ blockquote::after {
     /* transition: transform 400ms ease-in-out; */
   }
 
-  header .logo img {
+   .logo img {
     align-self: baseline;
-    height: 64px;
   }
   .socials {
     max-width: 100px;
   }
   .socials img {
     max-height: clamp(24px, 3vw, 32px);
+    position: relative;
+    bottom: 6px;
   }
   .socials a {
     align-items: none;
@@ -513,8 +519,9 @@ blockquote::after {
     padding: 2% 2% 70px;
     gap: 10px;
   }
-  .logo {
-    display: none;
+  .logo img {
+    position: absolute;
+    top: 3px;
   }
   header .schriftzug {
     display: block;
@@ -530,6 +537,10 @@ blockquote::after {
   }
   .socials {
     max-width: fit-content;
+  }
+  .socials a {
+    position: relative;
+    bottom: 8px;
   }
   .gallery {
     grid-template-columns: 1fr;

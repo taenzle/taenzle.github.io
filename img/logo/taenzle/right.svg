@@ -1,8 +1,43 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1600" viewBox="0 0 2 2">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="4.55in" height="6.82667in" viewBox="0 0 1365 2048">
-  <path id="gap3" fill="none" stroke="black" stroke-width="1" d="M 763.27,1361.09
+    <symbol id="schriftzug" width="1" height="1" viewBox="0 0 50 30">
+        <style>
+            :root {
+                --taenzle-gray: rgb(103, 110, 120);
+                --taenzle-rose: rgb(255, 194, 210);
+            }
+
+            text {
+                fill: var(--taenzle-rose);
+                text-anchor: middle;
+                dominant-baseline: middle;
+                font-family: Arial;
+                font-weight: 800;
+                font-size: 30px;
+                stroke: var(--taenzle-rose);
+                stroke-width: .2;
+            }
+
+            .outline {
+                stroke-linecap: square;
+                stroke-width: 2;
+                fill-opacity: 0;
+                paint-order: stroke;
+                z-index: 0;
+
+            }
+        </style>
+        <symbol id="taenzle" viewBox="0 0 100 100">
+            <text x="50%" y="50%">
+                TÄNZLE
+            </text>
+        </symbol>
+        <use href="#taenzle" x="0" y="8" class="outlined" opacity="0.2" />
+        <use href="#taenzle" x="0" y="4" class="outlined" opacity="0.6" />
+        <use href="#taenzle" x="0" y="0" id="filled" />
+    </symbol>
+    <symbol id="outline" width="1" height="1" viewBox="0 0 1365 2048">
+        <path id="gap3" fill="whitesmoke" stroke="whitesmoke" fill-rule="inherit" stroke-width="2" d="M 763.27,1361.09
            C 763.55,1360.82 766.55,1358.55 766.55,1358.45
              766.55,1358.36 766.91,1354.27 766.91,1354.27
              766.91,1354.27 764.73,1350.64 764.73,1350.64
@@ -454,5 +489,9 @@
              542.00,625.10 537.94,624.26 534.92,621.28
              530.23,616.65 527.65,604.32 514.00,606.00 Z
            M 727.25,1322.12M 705.36,1318.82M 430.06,1827.66M 1009.00,1536.00M 734.69,1397.33" />
+
+    </symbol>
+    <use href="#schriftzug" x="0.0" y="0" />
+    <use href="#outline" x="0.5" y="0.04" />
 
 </svg>
