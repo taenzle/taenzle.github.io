@@ -220,7 +220,7 @@ blockquote::after {
   flex-direction: inherit;
   align-items: center;
 }
-.uebermich img {
+#uebermich-portrait {
   border-radius: 50%;
   width: clamp(50px, 55%, 175px);
 }
