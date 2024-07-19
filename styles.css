@@ -283,7 +283,7 @@ blockquote::after {
   min-width: min-content;
   max-width: 400px;
 }
-.cv-column li {
+.cv-column ul li {
   padding: 0.5rem;
 }
 .cv-column + .cv-column {
@@ -486,6 +486,7 @@ blockquote::after {
   .uebermich-cv {
     display: flex;
     flex-direction: column;
+    margin: 0px 10%;
   }
   .cv-column {
     all: unset;
@@ -504,7 +505,7 @@ blockquote::after {
     list-style: square;
   }
   .cv-column ul li {
-    list-style-position: inside;
+    /* list-style-position: inside; */
   }
 
   #sonstige-ausbildungen {
@@ -515,9 +516,11 @@ blockquote::after {
     margin-right: 2%;
     width: 100%;
   }
-  #sonstige-ausbildungen ul li {
+  #sonstige-ausbildungen ul {
     direction: rtl;
     text-align: right;
+  }
+  #sonstige-ausbildungen ul li  {
   }
   /* ANGEBOTE */
 
@@ -584,6 +587,11 @@ blockquote::after {
     position: relative;
     bottom: 8px;
   }
+
+  .uebermich-cv {
+    font-size: 0.8rem;
+  }
+
   .gallery {
     grid-template-columns: 1fr;
   }
