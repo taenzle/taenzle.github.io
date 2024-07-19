@@ -42,10 +42,6 @@ nav {
 h2 {
   font-size: 3rem;
 }
-.schriftzug {
-  bottom: 10px;
-  text-align: center;
-}
 header b {
   position: relative;
   bottom: 3px;
@@ -54,29 +50,32 @@ header b {
 }
 .logo {
   grid-column: 1;
-  border-radius: 50%;
   min-width: fit-content;
   height: fit-content;
 }
 .logo img {
-  /* position: relative; */
   height: calc(5px + 8vw);
-  max-height: 200px;
-  /* background: whitesmoke; */
+  min-height: 80px;
+  max-height: 144px;
+  position: relative;
+  top: 10px;
 }
 .socials {
-  /* min-width: max-content; */
+  width: 100%;
   display: flex;
+  justify-content: flex-end;
+  padding: 0% 1vw 0% 0%;
   grid-column: 4;
-  justify-content: center;
   gap: 2px;
-  width: 100px;
 }
 .socials a {
   display: flex;
   align-items: center;
   height: 2em;
   object-fit: cover;
+  height: clamp(24px, 8vw, 140px);
+  min-height: 80px;
+  max-height: 144px;
 }
 .socials a img {
   height: 50%;
@@ -338,7 +337,8 @@ blockquote::after {
   header {
     justify-content: space-between;
     align-items: center;
-    padding-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 25px;
     padding-right: 5%;
     width: 100vw;
     min-width: unset;
@@ -347,7 +347,7 @@ blockquote::after {
   header::after {
     display: block;
     position: absolute;
-    top: 105px;
+    top: 110px;
     right: 0px;
     left: 0px;
     background-color: var(--taenzle-rose);
@@ -364,7 +364,7 @@ blockquote::after {
   nav {
     all: unset;
     position: absolute;
-    top: 120px;
+    top: 130px;
     right: 0px;
     left: 0px;
     max-width: 100vw;
@@ -388,17 +388,15 @@ blockquote::after {
   }
   .logo img {
     align-self: baseline;
+    position: relative;
+    top: 10px;
   }
   .socials {
     max-width: 100px;
-  }
-  .socials img {
-    position: relative;
-    bottom: 6px;
-    max-height: clamp(24px, 3vw, 32px);
+
   }
   .socials a {
-    align-items: none;
+    align-items: center;
   }
 
   .intro {
