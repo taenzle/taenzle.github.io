@@ -183,7 +183,6 @@ blockquote::after {
 
 .intro img {
   width: 50%;
-  max-width: 650px;
 }
 #intro-portrait {
   width: 50%;
@@ -239,6 +238,10 @@ blockquote::after {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#uebermich-graphic-mobile {
+  display: none;
 }
 
 .uebermich-portrait {
@@ -338,7 +341,6 @@ blockquote::after {
   column-gap: 3vw;
 }
 .angebote h2 {
-  margin: 3% 0;
 }
 
 .angebot {
@@ -386,11 +388,11 @@ blockquote::after {
     justify-self: initial;
     bottom: 0px;
   }
-  .logo img {
-    object-fit: cover;
-    max-height: 64px;
-    width: 200px;
-  }
+  /* .logo img { */
+  /*   object-fit: cover; */
+  /*   max-height: 64px; */
+  /*   width: 200px; */
+  /* } */
   nav {
     all: unset;
     position: absolute;
@@ -462,14 +464,21 @@ blockquote::after {
   .intro-text h1 {
     margin: 0px;
   }
-  .intro img {
-    margin-left: 0px;
+
+  #uebermich-graphic-mobile {
+    display: initial;
     width: 100%;
+    max-width: 650px;
   }
   .uebermich-portrait {
     margin-top: 50px;
     align-items: center;
     width: 100%;
+  }
+  #intro-portrait {
+    all: unset;
+    width: 100%;
+    object-fit: cover;
   }
   .uebermich-portrait h2 {
     align-self: center;
@@ -477,7 +486,6 @@ blockquote::after {
   .uebermich-cv {
     display: flex;
     flex-direction: column;
-    width: 100%;
   }
   .cv-column {
     all: unset;
@@ -492,10 +500,24 @@ blockquote::after {
   }
   .cv-column ul {
     min-width: 100%;
+    padding: 0;
+    list-style: square;
   }
-  .cv-column + .cv-column {
+  .cv-column ul li {
+    list-style-position: inside;
+  }
+
+  #sonstige-ausbildungen {
     align-items: center;
-    background: none;
+  }
+  #sonstige-ausbildungen h3 {
+    text-align: right;
+    margin-right: 2%;
+    width: 100%;
+  }
+  #sonstige-ausbildungen ul li {
+    direction: rtl;
+    text-align: right;
   }
   /* ANGEBOTE */
 
@@ -536,7 +558,7 @@ blockquote::after {
 @media (max-width: 380px) {
   header {
     flex-direction: row;
-    padding: 2% 2% 70px;
+    padding: 2% 2% 6px;
     gap: 10px;
   }
   .logo img {
