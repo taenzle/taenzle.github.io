@@ -54,28 +54,28 @@ header b {
   height: fit-content;
 }
 .logo img {
+  position: relative;
+  top: 10px;
   height: calc(5px + 8vw);
   min-height: 80px;
   max-height: 144px;
-  position: relative;
-  top: 10px;
 }
 .socials {
-  width: 100%;
   display: flex;
-  justify-content: flex-end;
-  padding: 0% 1vw 0% 0%;
   grid-column: 4;
+  justify-content: flex-end;
   gap: 2px;
+  padding: 0% 1vw 0% 0%;
+  width: 100%;
 }
 .socials a {
   display: flex;
   align-items: center;
   height: 2em;
-  object-fit: cover;
   height: clamp(24px, 8vw, 140px);
   min-height: 80px;
   max-height: 144px;
+  object-fit: cover;
 }
 .socials a img {
   height: 50%;
@@ -135,12 +135,12 @@ blockquote {
 blockquote::before {
   bottom: 40%;
   left: -20%;
-  content: "«";
+  content: open-quote;
 }
 blockquote::after {
   top: -20%;
   right: -20%;
-  content: "»";
+  content: close-quote;
 }
 blockquote::before,
 blockquote::after {
@@ -338,8 +338,8 @@ blockquote::after {
     justify-content: space-between;
     align-items: center;
     padding-top: 15px;
-    padding-bottom: 25px;
     padding-right: 5%;
+    padding-bottom: 25px;
     width: 100vw;
     min-width: unset;
     max-width: unset;
@@ -387,13 +387,12 @@ blockquote::after {
     all: unset;
   }
   .logo img {
-    align-self: baseline;
     position: relative;
     top: 10px;
+    align-self: baseline;
   }
   .socials {
     max-width: 100px;
-
   }
   .socials a {
     align-items: center;
