@@ -219,9 +219,9 @@ blockquote::after {
   flex-direction: inherit;
   align-items: center;
 }
-#uebermich-portrait {
+#uebermich-portrait-img {
   border-radius: 50%;
-  width: clamp(50px, 55%, 175px);
+  width: clamp(50px, 55%, 255px);
 }
 .uebermich h2 {
   min-width: max-content;
@@ -246,6 +246,7 @@ blockquote::after {
   padding-left: 2rem;
   width: 75%;
   max-width: 400px;
+  list-style: square;
 }
 .cv-column h3 {
   margin-bottom: 0%;
@@ -420,6 +421,12 @@ blockquote::after {
   .intro-text h1 {
     margin: 0px;
   }
+  #intro-portrait {
+    all: unset;
+    width: 100%;
+    object-fit: cover;
+  }
+
   #uebermich-graphic-mobile {
     display: initial;
     width: 100%;
@@ -429,11 +436,6 @@ blockquote::after {
     align-items: center;
     margin-top: 50px;
     width: 100%;
-  }
-  #intro-portrait {
-    all: unset;
-    width: 100%;
-    object-fit: cover;
   }
   .uebermich-portrait h2 {
     align-self: center;
@@ -456,7 +458,6 @@ blockquote::after {
   }
   .cv-column ul {
     min-width: 100%;
-    list-style: square;
   }
   #sonstige-ausbildungen {
     align-items: center;
@@ -470,6 +471,9 @@ blockquote::after {
     padding: 0 32px 0 0;
     direction: rtl;
     text-align: right;
+  }
+  #uebermich-footer {
+    padding-top: 0px;
   }
 
   /* ANGEBOTE */
