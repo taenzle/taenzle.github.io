@@ -9,10 +9,8 @@
             fill: var(--taenzle-rose);
             text-anchor: middle;
             dominant-baseline: middle;
-            font-family: Arial;
-            /* stroke: var(--taenzle-rose); */
+            font-family: Arial, Helvetica, sans-serif;
             stroke-width: 0.2;
-
             font-weight: 600;
             font-size: 100%;
         }

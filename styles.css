@@ -342,7 +342,7 @@ blockquote::after {
     align-items: center;
     padding-top: 15px;
     padding-right: 5%;
-    padding-bottom: 25px;
+    padding-bottom: 85px;
     width: 100vw;
     min-width: unset;
     max-width: unset;
@@ -356,10 +356,8 @@ blockquote::after {
     background-color: var(--taenzle-rose);
     min-height: 4px;
     content: "";
-    /* margin: 0px 2%; */
-    /* transform: scale(1, 1); */
-    /* transition: transform 400ms ease-in-out; */
   }
+
   header b {
     bottom: 0px;
     justify-self: initial;
