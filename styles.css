@@ -452,7 +452,6 @@ blockquote::after {
     max-width: unset;
   }
   .cv-column ul {
-    padding: 0;
     min-width: 100%;
     list-style: square;
   }
@@ -460,11 +459,12 @@ blockquote::after {
     align-items: center;
   }
   #sonstige-ausbildungen h3 {
-    margin-right: 2%;
+    padding-right: 16px;
     width: 100%;
     text-align: right;
   }
   #sonstige-ausbildungen ul {
+    padding: 0 32px 0 0;
     direction: rtl;
     text-align: right;
   }
