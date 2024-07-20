@@ -2,7 +2,7 @@ import { parse } from "node-html-parser";
 import fs from "node:fs";
 import { win32 as path } from "node:path";
 
-const html_dir = "./html";
+const html_dir = "./sections";
 
 const index_data = fs.readFileSync("./index.html", "utf-8");
 const index_root = parse(index_data);
