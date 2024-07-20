@@ -278,7 +278,6 @@ blockquote::after {
   margin-bottom: 15px;
   min-height: auto;
   object-fit: cover;
-  font-size: large;
 }
 .gallery figure figcaption {
   display: flex;
@@ -295,6 +294,7 @@ blockquote::after {
 }
 .eindruck-titel {
   margin: 0px;
+  font-size: clamp(0.9rem, -1.5rem + 2vw, 1.2rem);
 }
 .eindruck-datum {
   margin-top: 0px;
@@ -396,9 +396,9 @@ blockquote::after {
     align-self: baseline;
   }
   .socials {
+    justify-self: end;
     padding-right: 0;
     max-width: 100px;
-    justify-self: end;
   }
   .socials a {
     align-items: center;
@@ -521,8 +521,8 @@ blockquote::after {
   }
   .logo img {
     position: relative;
-    max-width: 90vw;
     bottom: 6px;
+    max-width: 90vw;
   }
   .schriftzug {
     display: block;
