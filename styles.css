@@ -509,6 +509,9 @@ blockquote::after {
   }
 }
 @media (max-width: 359px) {
+  body {
+    min-width: fit-content;
+  }
   header {
     display: flex;
     flex-direction: row;
