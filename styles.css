@@ -256,6 +256,9 @@ blockquote::after {
 .cv-column ul li {
   padding: 0.5rem;
 }
+.cv-column ul li::marker {
+  color: var(--taenzle-rose);
+}
 .cv-column + .cv-column {
   align-items: flex-start;
 }
