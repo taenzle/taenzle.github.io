@@ -4,10 +4,11 @@ import { win32 as path } from "node:path";
 
 const html_dir = "./html";
 
-const header_content = fs.readFileSync("./header.html", "utf-8");
-const footer_content = fs.readFileSync("./footer.html", "utf-8");
+const index_content = fs.readFileSync("./index.html", "utf-8");
+const index_root = parse(index_content);
+const header_content = index_root.querySelector("header").innerHTML;
+const footer_content = index_root.querySelector("footer").innerHTML;
 
-exchange_header_and_footer("./index.html", header_content, footer_content);
 
 fs.readdir(html_dir, (err, files) => {
   if (err) {
