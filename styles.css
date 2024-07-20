@@ -350,7 +350,7 @@ blockquote::after {
   header::after {
     display: block;
     position: absolute;
-    top: 120px;
+    top: clamp(0px, 25px + 27vw, 120px);
     right: 0px;
     left: 0px;
     background-color: var(--taenzle-rose);
@@ -367,7 +367,7 @@ blockquote::after {
   nav {
     all: unset;
     position: absolute;
-    top: 140px;
+    top: clamp(0px, 44px + 27vw, 140px);
     right: 0px;
     left: 0px;
     max-width: 100vw;
@@ -390,7 +390,7 @@ blockquote::after {
     all: unset;
   }
   .logo img {
-    width: 60vw;
+    width: 90vw;
     max-width: 250px;
   }
   .socials {
@@ -515,6 +515,9 @@ blockquote::after {
     justify-content: center;
     gap: 10px;
     padding: 2% 2% 6px;
+  }
+  .front-buttons {
+    display: flex;
   }
   .logo img {
     position: relative;
