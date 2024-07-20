@@ -63,7 +63,7 @@ header b {
 .socials {
   display: flex;
   grid-column: 4;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 2px;
   padding: 0% 1vw 0% 0%;
   width: 100%;
@@ -78,7 +78,7 @@ header b {
   object-fit: cover;
 }
 .socials a img {
-  height: 50%;
+  height: 30%;
 }
 .front-buttons {
   display: flex;
@@ -392,7 +392,9 @@ blockquote::after {
     align-self: baseline;
   }
   .socials {
+    padding-right: 0;
     max-width: 100px;
+    justify-self: end;
   }
   .socials a {
     align-items: center;
@@ -502,17 +504,17 @@ blockquote::after {
     margin-bottom: 8%;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 359px) {
   header {
+    display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 10px;
     padding: 2% 2% 6px;
   }
-  nav {
-    top: 55px;
-  }
   .logo img {
     position: relative;
+    max-width: 90vw;
     bottom: 6px;
   }
   .schriftzug {
@@ -525,6 +527,7 @@ blockquote::after {
     font-size: small;
   }
   .socials {
+    display: none;
     max-width: fit-content;
   }
   .socials a {
