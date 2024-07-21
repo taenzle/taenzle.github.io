@@ -355,6 +355,7 @@ blockquote::after {
     left: 0px;
     background-color: var(--taenzle-rose);
     min-height: 4px;
+    border-radius: 0.9px;
     content: "";
   }
 
