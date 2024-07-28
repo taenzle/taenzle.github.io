@@ -356,12 +356,12 @@ blockquote::after {
   /* header::after { */
   /*   display: block; */
   /*   position: absolute; */
-  /*   top: clamp(60px, 25px + 27vw, 120px); */
+  /*   top: 62px; */
   /*   right: 0px; */
   /*   left: 0px; */
   /*   border-radius: 0.9px; */
   /*   background-color: var(--taenzle-rose); */
-  /*   min-height: 4px; */
+  /*   min-height: 3px; */
   /*   content: ""; */
   /* } */
 
@@ -378,6 +378,15 @@ blockquote::after {
     left: 0px;
     background-color: rgba(245, 245, 245, 0.423);
     color: whitesmoke;
+    /* border-top: var(--taenzle-rose) solid 2px; */
+    box-shadow:
+      0 -2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 -6.7px 5.3px rgba(0, 0, 0, 0.048),
+
+      0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+      0 12.5px 10px rgba(0, 0, 0, 0.06),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.072);
   }
   .front-buttons {
     display: grid;
