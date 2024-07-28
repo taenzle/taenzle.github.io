@@ -40,6 +40,7 @@ nav {
   grid-column: 2 / 4;
 }
 h2 {
+  margin-top: 0;
   font-size: 3rem;
 }
 header b {
@@ -291,7 +292,7 @@ blockquote::after {
   object-position: center;
 }
 .eindruck-titel {
-  margin: 0px;
+  margin: 0px 0px 5px;
   font-size: clamp(0.9rem, -1.5rem + 2vw, 1.2rem);
 }
 .eindruck-datum {
@@ -329,6 +330,9 @@ blockquote::after {
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 /********************************************************************************/
 @media (max-width: 1000px) {
+  h2 {
+    margin-bottom: 20px;
+  }
   section {
     padding-right: 7%;
     padding-left: 7%;
@@ -340,24 +344,23 @@ blockquote::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 15px;
-    padding-right: 5%;
-    padding-bottom: 85px;
+    padding-top: 5px;
+    padding-right: 3%;
+    padding-left: 2%;
+    padding-bottom: min(60px, 10vw);
     width: 100vw;
-    min-width: unset;
-    max-width: unset;
   }
-  header::after {
-    display: block;
-    position: absolute;
-    top: clamp(60px, 25px + 27vw, 120px);
-    right: 0px;
-    left: 0px;
-    background-color: var(--taenzle-rose);
-    min-height: 4px;
-    border-radius: 0.9px;
-    content: "";
-  }
+  /* header::after { */
+  /*   display: block; */
+  /*   position: absolute; */
+  /*   top: clamp(60px, 25px + 27vw, 120px); */
+  /*   right: 0px; */
+  /*   left: 0px; */
+  /*   border-radius: 0.9px; */
+  /*   background-color: var(--taenzle-rose); */
+  /*   min-height: 4px; */
+  /*   content: ""; */
+  /* } */
 
   header b {
     bottom: 0px;
@@ -366,21 +369,30 @@ blockquote::after {
   nav {
     all: unset;
     position: absolute;
-    top: clamp(0px, 33px + 27vw, 140px);
+    top: 90px;
+    /* top: clamp(120px, 23px + 17vw, 130px); */
     right: 0px;
     left: 0px;
-    max-width: 100vw;
+    background-color: whitesmoke;
+    color: var(--taenzle-gray);
   }
   .front-buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: space-evenly;
     gap: 3vw;
-    text-align: center;
+  }
+  .front-buttons li {
+    display: block;
+    align-content: baseline;
+    padding: max(10px, 1vw);
   }
   .front-button {
     all: unset;
-    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    display: block;
+    height: 100%;
+    font-size: clamp(.7rem, 4vw, 1.5rem);
+    text-align: center;
+    align-content: center;
   }
   .front-button::after {
     display: none;
@@ -389,13 +401,12 @@ blockquote::after {
     transition: unset;
     color: unset;
   }
-  .front-button:hover::after {
-    all: unset;
-  }
+
   .logo img {
     width: 90vw;
-    max-width: 250px;
+    max-width: 200px;
   }
+
   .socials {
     justify-content: flex-end;
     padding-right: 0;
@@ -424,8 +435,8 @@ blockquote::after {
   #intro-portrait {
     all: unset;
     width: 100%;
-    max-height: 500px;
     max-width: 450px;
+    max-height: 500px;
     object-fit: cover;
     object-position: 0% 10%;
   }
@@ -437,7 +448,7 @@ blockquote::after {
   }
   .uebermich-portrait {
     align-items: center;
-    margin-top: 50px;
+    margin-top: 10px;
     width: 100%;
   }
   .uebermich-portrait h2 {
@@ -514,48 +525,48 @@ blockquote::after {
     margin-bottom: 8%;
   }
 }
-@media (max-width: 359px) {
-  body {
-    min-width: fit-content;
-  }
-  header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    padding: 2% 2% 40px;
-  }
-  .front-buttons {
-    display: flex;
-  }
-  .logo img {
-    position: relative;
-    bottom: 6px;
-    max-width: 90vw;
-  }
-  .schriftzug {
-    display: block;
-  }
-  .front-buttons {
-    justify-content: space-around;
-  }
-  .front-buttons a {
-    font-size: small;
-  }
-  .socials {
-    display: none;
-    max-width: fit-content;
-  }
-  .socials a {
-    position: relative;
-    bottom: 8px;
-  }
-
-  .uebermich-cv {
-    font-size: 0.8rem;
-  }
-
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-}
+/* @media (max-width: 359px) { */
+/*   body { */
+/*     min-width: fit-content; */
+/*   } */
+/*   header { */
+/*     display: flex; */
+/*     flex-direction: row; */
+/*     justify-content: center; */
+/*     gap: 10px; */
+/*     padding: 2% 2% 40px; */
+/*   } */
+/*   .front-buttons { */
+/*     display: flex; */
+/*   } */
+/*   .logo img { */
+/*     position: relative; */
+/*     bottom: 6px; */
+/*     max-width: 90vw; */
+/*   } */
+/*   .schriftzug { */
+/*     display: block; */
+/*   } */
+/*   .front-buttons { */
+/*     justify-content: space-around; */
+/*   } */
+/*   .front-buttons a { */
+/*     font-size: small; */
+/*   } */
+/*   .socials { */
+/*     display: none; */
+/*     max-width: fit-content; */
+/*   } */
+/*   .socials a { */
+/*     position: relative; */
+/*     bottom: 8px; */
+/*   } */
+/**/
+/*   .uebermich-cv { */
+/*     font-size: 0.8rem; */
+/*   } */
+/**/
+/*   .gallery { */
+/*     grid-template-columns: 1fr; */
+/*   } */
+/* } */
