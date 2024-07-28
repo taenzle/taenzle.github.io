@@ -40,7 +40,6 @@ nav {
   grid-column: 2 / 4;
 }
 h2 {
-  margin-top: 0;
   font-size: 3rem;
 }
 header b {
@@ -331,6 +330,7 @@ blockquote::after {
 /********************************************************************************/
 @media (max-width: 1000px) {
   h2 {
+    margin-top: 0;
     margin-bottom: 20px;
   }
   section {
@@ -373,8 +373,8 @@ blockquote::after {
     /* top: clamp(120px, 23px + 17vw, 130px); */
     right: 0px;
     left: 0px;
-    background-color: whitesmoke;
-    color: var(--taenzle-gray);
+    background-color: rgba(245, 245, 245, 0.423);
+    color: whitesmoke;
   }
   .front-buttons {
     display: grid;
@@ -403,7 +403,7 @@ blockquote::after {
   }
 
   .logo img {
-    width: 90vw;
+    width: 70vw;
     max-width: 200px;
   }
 
@@ -453,6 +453,7 @@ blockquote::after {
   }
   .uebermich-portrait h2 {
     align-self: center;
+    margin-top: 4%;
   }
   .uebermich-cv {
     display: flex;
