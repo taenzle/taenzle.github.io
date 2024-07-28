@@ -338,16 +338,19 @@ blockquote::after {
     padding-left: 7%;
   }
   body {
+    min-width: 320px;
     display: inline;
   }
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 5px;
-    padding-right: 3%;
-    padding-left: 2%;
+    padding-top: 10px;
+    /* padding-right: 3%; */
+    /* padding-left: 2%; */
+    padding-right: 7%;
     padding-bottom: min(60px, 10vw);
+    padding-left: 7%;
     width: 100vw;
   }
   /* header::after { */
@@ -369,7 +372,7 @@ blockquote::after {
   nav {
     all: unset;
     position: absolute;
-    top: 90px;
+    top: 65px;
     /* top: clamp(120px, 23px + 17vw, 130px); */
     right: 0px;
     left: 0px;
@@ -389,10 +392,10 @@ blockquote::after {
   .front-button {
     all: unset;
     display: block;
-    height: 100%;
-    font-size: clamp(.7rem, 4vw, 1.5rem);
-    text-align: center;
     align-content: center;
+    height: 100%;
+    font-size: clamp(0.7rem, 4vw, 1.5rem);
+    text-align: center;
   }
   .front-button::after {
     display: none;
@@ -402,17 +405,29 @@ blockquote::after {
     color: unset;
   }
 
+  .logo {
+    all: unset;
+  }
   .logo img {
-    width: 70vw;
-    max-width: 200px;
+    max-width: 150px;
+    top: 0;
   }
 
   .socials {
     justify-content: flex-end;
     padding-right: 0;
+    width: unset;
+    position: relative;
+    bottom: 8px;
   }
   .socials a {
-    align-items: center;
+    all: unset;
+    display: flex;
+    height: clamp(14px, 5.5vw, 24px);
+    object-fit: cover;
+  }
+  .socials a img {
+    height: 100%;
   }
 
   .intro {
