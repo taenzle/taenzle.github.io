@@ -8,6 +8,7 @@
 
     svg {
       background-color: var(--taenzle-gray);
+      border-radius: 100%;
     }
 
     .main {
