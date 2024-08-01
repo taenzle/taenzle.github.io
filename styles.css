@@ -1,14 +1,12 @@
 :root {
   --taenzle-gray: rgb(103, 110, 120);
   --taenzle-rose: rgb(255, 194, 210);
-  --taenzle-nav: rgba(177, 174, 174, 0.423);
+  --taenzle-nav: rgb(121, 130, 142);
 }
 * {
   box-sizing: border-box;
 }
-html {
-  height: 100%j;
-}
+
 body {
   display: flex;
   flex-direction: column;
@@ -20,7 +18,7 @@ body {
   color: whitesmoke;
   font-family: Arial, sans-serif;
 }
-section {
+section,footer {
   padding: 30px 10%;
   max-width: 2000px;
 }
@@ -119,16 +117,18 @@ header b {
 
 footer {
   display: flex;
-  justify-content: center;
-  padding: 100px 2% 50px;
-  width: 100%;
-  max-width: 1440px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 100px;
+  width: 100vw;
+  background-color: var(--taenzle-nav);
 }
 blockquote {
   position: relative;
   margin: 11% 10%;
-  padding: 0;
   font-style: italic;
+  max-width: 463px;
   font-size: clamp(0.9rem, 3vw, 2.2rem);
 }
 blockquote::before {
@@ -150,7 +150,14 @@ blockquote::after {
   line-height: 1.618;
   text-align: center;
 }
-
+#socials-inline {
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+}
+#socials-inline img {
+  height: 30px;
+}
 /* INTRO */
 .title-image {
   display: flex;
@@ -181,10 +188,13 @@ blockquote::after {
   text-align: left;
 }
 .kontakt {
+  width: fit-content;
+  padding: 0% 2%;
   font-size: 1.1rem;
-  text-align: end;
+  text-align: start;
 }
 .kontakt h2 {
+  margin-top: 1rem;
   margin-bottom: 0px;
 }
 .kontakt ul {
@@ -192,7 +202,16 @@ blockquote::after {
   list-style: none;
 }
 .kontakt ul li {
-  padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.kontakt ul li > span,a {
+  margin-bottom: 0.5rem;
+}
+.kontakt ul li span {
+  font-weight: bold;
+  color: var(--taenzle-rose);
 }
 .kontakt ul li a {
   color: whitesmoke;
@@ -200,6 +219,9 @@ blockquote::after {
 }
 .kontakt ul li a:hover {
   text-decoration: underline;
+}
+#suess {
+  width: 100%;
 }
 
 /* UEBERMICH */
