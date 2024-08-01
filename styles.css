@@ -1,6 +1,7 @@
 :root {
   --taenzle-gray: rgb(103, 110, 120);
   --taenzle-rose: rgb(255, 194, 210);
+  --taenzle-nav: rgba(177, 174, 174, 0.423);
 }
 * {
   box-sizing: border-box;
@@ -376,7 +377,7 @@ blockquote::after {
     /* top: clamp(120px, 23px + 17vw, 130px); */
     right: 0px;
     left: 0px;
-    background-color: rgba(245, 245, 245, 0.423);
+    background-color: var(--taenzle-nav);
     color: whitesmoke;
     /* border-top: var(--taenzle-rose) solid 2px; */
     box-shadow:
