@@ -18,9 +18,18 @@ body {
   color: whitesmoke;
   font-family: Arial, sans-serif;
 }
-section,footer {
-  padding: 30px 10%;
+section,
+footer {
+  padding-top: 30px;
+  padding-right: 10%;
+  padding-bottom: 30px;
+  padding-left: 10%;
   max-width: 2000px;
+}
+
+section {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* HEADER */
@@ -116,20 +125,29 @@ header b {
 }
 
 footer {
+  background-color: var(--taenzle-nav);
+  padding: unset;
+  min-width: 100vw;
+  max-width: unset;
+}
+footer > div {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-  padding-bottom: 100px;
+  align-items: center;
+  padding-top: 60px;
+  padding-right: 10%;
+  padding-bottom: 30px;
+  padding-left: 10%;
   width: 100vw;
-  background-color: var(--taenzle-nav);
+  max-width: 2000px;
 }
 blockquote {
   position: relative;
-  margin: 11% 10%;
-  font-style: italic;
+  margin: 0% 8%;
   max-width: 463px;
-  font-size: clamp(0.9rem, 3vw, 2.2rem);
+  font-style: italic;
+  font-size: clamp(0.9rem, 1.8vw, 1.3rem);
 }
 blockquote::before {
   bottom: 40%;
@@ -146,36 +164,33 @@ blockquote::after {
   position: absolute;
   /* position: relative; */
   color: var(--taenzle-rose);
-  font-size: clamp(0.9rem, 10vw, 9rem);
+  font-size: clamp(0.9rem, 6vw, 9rem);
   line-height: 1.618;
   text-align: center;
 }
 #socials-inline {
-  display: flex;
-  flex-direction: row;
-  min-width: 100%;
+  align-items: baseline;
 }
 #socials-inline img {
-  height: 30px;
+  height: 24px;
 }
 /* INTRO */
 .title-image {
   display: flex;
-  gap: 80px;
-}
-.intro img {
-  width: 50%;
+  justify-content: center;
+  gap: 5%;
 }
 #intro-portrait {
-  width: 50%;
-  min-width: 440px;
+  width: 40%;
+  min-width: 340px;
+  max-height: 800px;
   object-fit: cover;
 }
 .intro-text {
   flex-direction: column;
   align-items: center;
-  width: 50%;
-  max-width: 650px;
+  max-width: 550px;
+  width: 55%;
   text-align: left;
 }
 .intro-text h1 {
@@ -183,18 +198,23 @@ blockquote::after {
   font-size: clamp(64px, 4vw, 96px);
 }
 .intro-text p {
-  max-width: 90%;
-  font-size: 1.3rem;
+  font-size: clamp(1.5rem, 2vw, 96px);
   text-align: left;
 }
 .kontakt {
-  width: fit-content;
   padding: 0% 2%;
+  padding: 0 0;
+  width: 50%;
   font-size: 1.1rem;
   text-align: start;
 }
+#kontakt-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 .kontakt h2 {
-  margin-top: 1rem;
+  margin-top: 0;
   margin-bottom: 0px;
 }
 .kontakt ul {
@@ -203,15 +223,14 @@ blockquote::after {
 }
 .kontakt ul li {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   padding-bottom: 10px;
 }
-.kontakt ul li > span,a {
-  margin-bottom: 0.5rem;
-}
 .kontakt ul li span {
-  font-weight: bold;
+  min-width: max-content;
   color: var(--taenzle-rose);
+  font-weight: bold;
 }
 .kontakt ul li a {
   color: whitesmoke;
@@ -322,6 +341,9 @@ blockquote::after {
 }
 
 /* ANGEBOTE */
+.angebote {
+  height: fit-content;
+}
 .angebote > div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -331,21 +353,19 @@ blockquote::after {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-width: none;
-  min-height: none;
 }
 .angebot img {
   width: 100%;
-  min-height: 50%;
-  max-height: 50%;
+  min-height: 40%;
+  max-height: 40%;
   object-fit: cover;
 }
 .angebot p {
-  margin-top: 3%;
+  margin-top: 4%;
   margin-bottom: 0%;
 }
 .angebot li {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 /********************************************************************************/
@@ -361,8 +381,8 @@ blockquote::after {
     padding-left: 7%;
   }
   body {
-    min-width: 320px;
     display: inline;
+    min-width: 320px;
   }
   header {
     display: flex;
@@ -399,8 +419,6 @@ blockquote::after {
     /* top: clamp(120px, 23px + 17vw, 130px); */
     right: 0px;
     left: 0px;
-    background-color: var(--taenzle-nav);
-    color: whitesmoke;
     /* border-top: var(--taenzle-rose) solid 2px; */
     box-shadow:
       0 -2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -408,6 +426,8 @@ blockquote::after {
       0 6.7px 5.3px rgba(0, 0, 0, 0.048),
       0 12.5px 10px rgba(0, 0, 0, 0.06),
       0 22.3px 17.9px rgba(0, 0, 0, 0.072);
+    background-color: var(--taenzle-nav);
+    color: whitesmoke;
   }
   .front-buttons {
     display: grid;
@@ -439,16 +459,16 @@ blockquote::after {
     all: unset;
   }
   .logo img {
-    max-width: 150px;
     top: 0;
+    max-width: 150px;
   }
 
   .socials {
+    position: relative;
+    bottom: 8px;
     justify-content: flex-end;
     padding-right: 0;
     width: unset;
-    position: relative;
-    bottom: 8px;
   }
   .socials a {
     all: unset;
@@ -467,12 +487,11 @@ blockquote::after {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    /* margin-top: 50px; */
   }
   .intro-text {
     flex-direction: column;
     margin-right: 0px;
-    width: 100%;
+    min-width: 100%;
   }
   .intro-text h1 {
     margin: 0px;
@@ -534,6 +553,25 @@ blockquote::after {
   }
   #uebermich-footer {
     padding-top: 0px;
+  }
+
+  footer > div {
+    flex-direction: column;
+    padding-top: 30px;
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+  .kontakt {
+    width: 100%;
+  }
+  blockquote {
+    margin-top: 8%;
+    margin-bottom: 7%;
+    font-size: clamp(0.9rem, 3.8vw, 2.3rem);
+  }
+  blockquote::before,
+  blockquote::after {
+    font-size: clamp(0.9rem, 10vw, 9rem);
   }
 
   /* ANGEBOTE */
