@@ -7,28 +7,6 @@
     <link rel="icon" href="/img/logo/taenzle/small_logo.svg" />
     <link rel="stylesheet" href="/styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-      const add_to_gallery = (eindruecke) => {
-        let gallery = document.getElementById("gallery");
-        let template = document.querySelector("#eindruck-template");
-        for (const e of eindruecke) {
-          let clone = template.content.cloneNode(true);
-          clone.querySelector(".eindruck-titel").textContent = e["text"];
-          clone.querySelector("img").src = e["image"];
-          clone.querySelector(".eindruck-datum").textContent = e["date"];
-          gallery.appendChild(clone);
-        }
-      };
-
-      fetch("/eindruecke.json")
-        .then((res) => {
-          return res.text();
-        })
-        .then((eindruecke) => {
-          const e = JSON.parse(eindruecke);
-          return add_to_gallery(e);
-        });
-    </script>
   </head>
   <body>
     <header>
@@ -77,224 +55,77 @@
         /></a>
       </div>
     </header>
+    <template id="eindruck-template">
+      <figure>
+        <figcaption>
+          <h3 class="eindruck-titel"></h3>
+          <p class="eindruck-datum"></p>
+        </figcaption>
+        <img src="" />
+      </figure>
+    </template>
 
     <section class="eindruecke">
       <h2>Eindrücke</h2>
       <div class="gallery" id="gallery">
-        <template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel"></h3>
-              <p class="eindruck-datum"></p>
-            </figcaption>
-            <img src="" />
-          </figure>
-        </template>
-        <template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">
-                Tanzworkshop mit der Jubla Niederwil
-              </h3>
-              <p class="eindruck-datum">Juli 2023</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Bewegungsworkshop in Zug</h3>
-              <p class="eindruck-datum">Juli 2023</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Schulsport in Villmergen</h3>
-              <p class="eindruck-datum">Oktober / November 2023</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Projekttage mit der HPS Wohlen</h3>
-              <p class="eindruck-datum">April 2024</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Tanzshow für den Tanzlade Wohlen</h3>
-              <p class="eindruck-datum">März 2023 / 2024</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Projektwoche im Mühlematten</h3>
-              <p class="eindruck-datum">April 2024</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Bewegungsworkshop in Zug</h3>
-              <p class="eindruck-datum">Mai 2024</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">
-                Competition mit der Streethoppers Crew
-              </h3>
-              <p class="eindruck-datum">Mai 2024</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">
-                Tanzworkshop mit der Jubla Niederwil
-              </h3>
-              <p class="eindruck-datum">Juli 2023</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Bewegungsworkshop in Zug</h3>
-              <p class="eindruck-datum">Juli 2023</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Schulsport in Villmergen</h3>
-              <p class="eindruck-datum">Oktober / November 2023</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Projekttage mit der HPS Wohlen</h3>
-              <p class="eindruck-datum">April 2024</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Tanzshow für den Tanzlade Wohlen</h3>
-              <p class="eindruck-datum">März 2023 / 2024</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Projektwoche im Mühlematten</h3>
-              <p class="eindruck-datum">April 2024</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Bewegungsworkshop in Zug</h3>
-              <p class="eindruck-datum">Mai 2024</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">
-                Competition mit der Streethoppers Crew
-              </h3>
-              <p class="eindruck-datum">Mai 2024</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">
-                Tanzworkshop mit der Jubla Niederwil
-              </h3>
-              <p class="eindruck-datum">Juli 2023</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Bewegungsworkshop in Zug</h3>
-              <p class="eindruck-datum">Juli 2023</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Schulsport in Villmergen</h3>
-              <p class="eindruck-datum">Oktober / November 2023</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Projekttage mit der HPS Wohlen</h3>
-              <p class="eindruck-datum">April 2024</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Tanzshow für den Tanzlade Wohlen</h3>
-              <p class="eindruck-datum">März 2023 / 2024</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Projektwoche im Mühlematten</h3>
-              <p class="eindruck-datum">April 2024</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">Bewegungsworkshop in Zug</h3>
-              <p class="eindruck-datum">Mai 2024</p>
-            </figcaption>
-            <img src="" />
-          </figure> </template
-        ><template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel">
-                Competition mit der Streethoppers Crew
-              </h3>
-              <p class="eindruck-datum">Mai 2024</p>
-            </figcaption>
-            <img src="" />
-          </figure>
-        </template>
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel">Tanzworkshop mit der Jubla Niederwil</h3>
+            <p class="eindruck-datum">Juli 2023</p>
+          </figcaption>
+          <img src="/img/eindruecke/jubla_niederwil.jpg" />
+        </figure>
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel">Bewegungsworkshop in Zug</h3>
+            <p class="eindruck-datum">Juli 2023</p>
+          </figcaption>
+          <img src="/img/eindruecke/zug_juli.jpg" />
+        </figure>
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel">Schulsport in Villmergen</h3>
+            <p class="eindruck-datum">Oktober / November 2023</p>
+          </figcaption>
+          <img src="/img/eindruecke/villmergen.png" />
+        </figure>
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel">Projekttage mit der HPS Wohlen</h3>
+            <p class="eindruck-datum">April 2024</p>
+          </figcaption>
+          <img src="/img/eindruecke/hps.jpg" />
+        </figure>
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel">Tanzshow für den Tanzlade Wohlen</h3>
+            <p class="eindruck-datum">März 2023 / 2024</p>
+          </figcaption>
+          <img src="/img/eindruecke/tanzshow.jpg" />
+        </figure>
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel">Projektwoche im Mühlematten</h3>
+            <p class="eindruck-datum">April 2024</p>
+          </figcaption>
+          <img src="/img/eindruecke/muehlematten.jpg" />
+        </figure>
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel">Bewegungsworkshop in Zug</h3>
+            <p class="eindruck-datum">Mai 2024</p>
+          </figcaption>
+          <img src="/img/eindruecke/zug_mai.jpg" />
+        </figure>
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel">
+              Competition mit der Streethoppers Crew
+            </h3>
+            <p class="eindruck-datum">Mai 2024</p>
+          </figcaption>
+          <img src="/img/eindruecke/competition.jpg" />
+        </figure>
       </div>
     </section>
     <footer>

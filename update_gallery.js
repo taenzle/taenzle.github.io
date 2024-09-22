@@ -10,12 +10,14 @@ const update_gallery = (html_path, json_path) => {
 
   let gallery = target_root.getElementById("gallery");
   let template = target_root.querySelector("#eindruck-template");
+  gallery.textContent = "";
   for (const e of eindruecke) {
-    let clone = template.clone(true);
-    clone.querySelector(".eindruck-titel").textContent = e["text"];
-    clone.querySelector("img").src = e["image"];
-    clone.querySelector(".eindruck-datum").textContent = e["date"];
-    gallery.appendChild(clone);
+    let figure = template.querySelector("figure").clone();
+    figure.querySelector(".eindruck-titel").textContent = e["text"];
+    let img = figure.querySelector("img");
+    img.setAttribute("src", e["image"]);
+    figure.querySelector(".eindruck-datum").textContent = e["date"];
+    gallery.appendChild(figure);
   }
   fs.writeFile(html_path, target_root.toString(), (err) => {
     if (err) {
