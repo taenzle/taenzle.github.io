@@ -321,6 +321,43 @@ blockquote::after {
 }
 
 /* EINDRUECKE */
+/* .cropped_window { */
+/*   overflow: hidden; */
+/*   height: 500px; */
+/* } */
+#mehr_check {
+  display: none;
+}
+
+#mehr_label {
+  position: relative;
+  top: 450px;
+  z-index: 999;
+}
+#weniger_label {
+  display: none;
+  position: relative;
+  top: 870px;
+  z-index: 999;
+}
+
+.eindruecke {
+  overflow: hidden;
+  height: 500px;
+  mask: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+#mehr_check:checked ~ .eindruecke {
+  height: unset;
+  mask: unset;
+}
+#mehr_check:checked ~ #mehr_label {
+  display: none;
+}
+#mehr_check:checked ~ #weniger_label {
+  display: block;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

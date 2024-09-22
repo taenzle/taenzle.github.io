@@ -7,6 +7,27 @@
     <link rel="icon" href="/img/logo/taenzle/small_logo.svg" />
     <link rel="stylesheet" href="/styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      let status = false;
+      let prev_height, prev_mask;
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .querySelector("#mehr_anzeigen")
+          .addEventListener("click", () => {
+            let gallery = document.querySelector(".eindruecke");
+            prev_height = gallery.style.height;
+            if (status) {
+              gallery.style.height = "500px";
+              // gallery.style.mask = prev_mask;
+              status = false;
+            } else {
+              gallery.style.height = "unset";
+              // gallery.style.mask = "unset";
+              status = true;
+            }
+          });
+      });
+    </script>
   </head>
   <body>
     <header>
@@ -123,6 +144,10 @@
         </div>
       </div>
     </section>
+
+    <input type="checkbox" id="mehr_check" />
+    <label for="mehr_check" id="mehr_label">Mehr Anzeigen</label>
+    <label for="mehr_check" id="weniger_label">Weniger Anzeigen</label>
     <section class="eindruecke">
       <h2>Eindrücke</h2>
       <div class="gallery" id="gallery">
