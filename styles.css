@@ -25,6 +25,13 @@ section {
   max-width: 2000px;
 }
 
+.schriftzug {
+  color: var(--taenzle-rose);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
 /* HEADER */
 header {
   display: grid;
