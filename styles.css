@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -22,14 +26,14 @@ section,
 footer {
   padding-top: 30px;
   padding-right: 10%;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
   padding-left: 10%;
   max-width: 2000px;
 }
 
 section {
-  padding-top: 30px;
   padding-bottom: 30px;
+  width: 100%;
 }
 
 /* HEADER */
@@ -49,6 +53,7 @@ nav {
 }
 h2 {
   font-size: 3rem;
+  margin-top: 0px;
 }
 header b {
   position: relative;
@@ -260,12 +265,15 @@ blockquote::after {
 }
 
 /* UEBERMICH */
+#uebermich_title {
+  align-self: start;
+}
 .uebermich {
+  padding-top: 50px;
+  padding-bottom: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-right: 2%;
-  padding-left: 2%;
 }
 #uebermich-graphic-mobile {
   display: none;
@@ -329,33 +337,44 @@ blockquote::after {
   display: none;
 }
 
+.eindruecke {
+  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
+  scroll-margin-top: 300px;
+}
+
 #mehr_label {
   position: relative;
-  top: 450px;
+  top: 550px;
   z-index: 999;
 }
+
 #weniger_label {
-  display: none;
-  position: relative;
-  top: 870px;
-  z-index: 999;
+  margin: 1%;
+  align-self: center;
+  /* display: none; */
 }
 
 .eindruecke {
-  overflow: hidden;
-  height: 500px;
-  mask: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  transition: height 1s;
 }
 
+#mehr_check:not(:checked) ~ .eindruecke {
+  height: 38vw;
+  overflow: hidden;
+  mask: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
 #mehr_check:checked ~ .eindruecke {
-  height: unset;
   mask: unset;
 }
 #mehr_check:checked ~ #mehr_label {
-  display: none;
-}
-#mehr_check:checked ~ #weniger_label {
-  display: block;
+  visibility: hidden;
 }
 
 .gallery {
@@ -397,6 +416,9 @@ blockquote::after {
 .angebote {
   height: fit-content;
 }
+.angebote h2 {
+  margin-top: 30px;
+}
 .angebote > div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -409,8 +431,8 @@ blockquote::after {
 }
 .angebot img {
   width: 100%;
-  min-height: 40%;
-  max-height: 40%;
+  min-height: 45%;
+  max-height: 55%;
   object-fit: cover;
 }
 .angebot p {
