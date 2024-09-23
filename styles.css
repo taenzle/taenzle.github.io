@@ -210,7 +210,7 @@ blockquote::after {
   font-size: clamp(64px, 4vw, 96px);
 }
 .intro-text p {
-  font-size: clamp(1.5rem, 2vw, 96px);
+  font-size: clamp(1.5rem, 2vw, 36px);
   text-align: left;
 }
 .intro-text p:nth-last-child(2) {
@@ -305,6 +305,7 @@ blockquote::after {
   padding: 0% 0%;
   font-size: 1.2rem;
 }
+
 .cv-column {
   display: flex;
   flex-direction: column;
@@ -422,6 +423,7 @@ blockquote::after {
 /* ANGEBOTE */
 .angebote {
   height: fit-content;
+  padding-bottom: 0px;
 }
 .angebote h2 {
   margin-top: 30px;
@@ -439,7 +441,7 @@ blockquote::after {
 .angebot img {
   width: 100%;
   min-height: 45%;
-  max-height: 55%;
+  max-height: 45%;
   object-fit: cover;
 }
 .angebot p {
