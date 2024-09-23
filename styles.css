@@ -36,6 +36,13 @@ section {
   width: 100%;
 }
 
+.schriftzug {
+  color: var(--taenzle-rose);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
 /* HEADER */
 header {
   display: grid;
