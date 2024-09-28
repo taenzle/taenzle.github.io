@@ -137,21 +137,25 @@ header b {
 
 footer {
   background-color: var(--taenzle-nav);
+  align-self: center;
   padding: unset;
   min-width: 100vw;
   max-width: unset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 footer > div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 20px;
   padding-right: 10%;
   padding-bottom: 60px;
   padding-left: 10%;
-  width: 100vw;
-  max-width: 2000px;
+  width: 100%;
+  max-width: 1600px;
 }
 blockquote {
   position: relative;
