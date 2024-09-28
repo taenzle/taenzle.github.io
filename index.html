@@ -39,9 +39,7 @@
       <nav>
         <ul class="front-buttons">
           <li>
-            <a href="/index.html#uebermich" class="front-button"
-              >Über mich</a
-            >
+            <a href="/index.html#uebermich" class="front-button">Über mich</a>
           </li>
           <li>
             <a href="/index.html#angebote" class="front-button"
@@ -49,9 +47,7 @@
             >
           </li>
           <li>
-            <a href="/index.html#eindruecke" class="front-button"
-              >Eindrücke</a
-            >
+            <a href="/index.html#eindruecke" class="front-button">Eindrücke</a>
           </li>
         </ul>
       </nav>
@@ -87,7 +83,9 @@
             das, was mit Tanzen zu tun hat und liebe es, diese Leidenschaft mit
             meinen Mitmenschen zu teilen.
           </p>
-          <p>Mit <span class="schriftzug">Tänzle</span> möchte ich genau das tun!</p>
+          <p>
+            Mit <span class="schriftzug">Tänzle</span> möchte ich genau das tun!
+          </p>
           <a href="/index.html#kontakt" class="kontakt-button"> Kontakt </a>
         </div>
       </div>
@@ -143,7 +141,20 @@
     </section>
 
     <input type="checkbox" id="mehr_check" />
-    <label for="mehr_check" id="mehr_label">Mehr Anzeigen</label>
+    <label for="mehr_check" id="mehr_label">
+      <span id="mehr_text">Mehr Anzeigen</span>
+      <svg
+        id="downarrow"
+        viewBox="7 8 10 7"
+        fill="whitesmoke"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M16.5303 8.96967C16.8232 9.26256 16.8232 9.73744 16.5303 10.0303L12.5303 14.0303C12.2374 14.3232 11.7626 14.3232 11.4697 14.0303L7.46967 10.0303C7.17678 9.73744 7.17678 9.26256 7.46967 8.96967C7.76256 8.67678 8.23744 8.67678 8.53033 8.96967L12 12.4393L15.4697 8.96967C15.7626 8.67678 16.2374 8.67678 16.5303 8.96967Z" />
+      </svg>
+    </label>
+
     <section class="eindruecke" id="eindruecke">
       <h2>Eindrücke</h2>
       <div class="gallery" id="gallery">
@@ -206,7 +217,20 @@
           <img src="/img/eindruecke/competition.jpg" />
         </figure>
       </div>
-      <label for="mehr_check" id="weniger_label">Weniger Anzeigen</label>
+      <label for="mehr_check" id="weniger_label">
+        <svg
+          id="uparrow"
+          viewBox="7 8 10 7"
+          fill="whitesmoke"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M16.5303 14.0303C16.2374 14.3232 15.7626 14.3232 15.4697 14.0303L12 10.5607L8.53033 14.0303C8.23744 14.3232 7.76256 14.3232 7.46967 14.0303C7.17678 13.7374 7.17678 13.2626 7.46967 12.9697L11.4697 8.96967C11.7626 8.67678 12.2374 8.67678 12.5303 8.96967L16.5303 12.9697C16.8232 13.2626 16.8232 13.7374 16.5303 14.0303Z" />
+        </svg>
+        <span id="weniger_text"> Weniger Anzeigen</span>
+      </label>
     </section>
 
     <section class="uebermich" id="uebermich">
