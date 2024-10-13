@@ -26,7 +26,6 @@ section,
 footer {
   padding-top: 30px;
   padding-right: 10%;
-  /* padding-bottom: 30px; */
   padding-left: 10%;
   max-width: 2000px;
 }
@@ -280,8 +279,8 @@ blockquote::after {
   align-self: start;
 }
 .uebermich {
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 50px;
+  padding-bottom: 65px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -301,6 +300,7 @@ blockquote::after {
 }
 .uebermich h2 {
   min-width: max-content;
+  margin-bottom: 2.5rem;
   font-size: clamp(2rem, -0.5rem + 4vw, 3.5rem);
 }
 .uebermich-cv {
@@ -351,70 +351,12 @@ blockquote::after {
 }
 
 .eindruecke {
-  margin-top: -85px;
   display: flex;
   flex-direction: column;
-  scroll-margin-top: 300px;
 }
-
+#weniger_label,
 #mehr_label {
-  top: 45vw;
-  z-index: 999;
-}
-#mehr_text {
-  margin-bottom: 0.3rem;
-}
-#mehr_label,
-#weniger_label {
-  font-size: 2rem;
-  position: relative;
-  margin: 1%;
-  align-self: center;
-  font-size: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-#mehr_label:hover,
-#weniger_label:hover {
-  color: var(--taenzle-rose);
-  transition: color 300ms ease-in-out;
-}
-#mehr_label:hover > svg,
-#weniger_label:hover > svg {
-  fill: var(--taenzle-rose);
-  transition: fill 300ms ease-in-out;
-}
-
-#uparrow,
-#downarrow {
-  max-height: 2.2rem;
-}
-
-#weniger_text {
-  margin-top: 1rem;
-}
-
-
-#mehr_check:not(:checked) ~ .eindruecke {
-  height: 40vw;
-  overflow: hidden;
-  mask: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.7) 75%,
-    rgba(0, 0, 0, 0) 100%
-  );
-}
-#mehr_check:checked ~ .eindruecke {
-  mask: unset;
-}
-#mehr_check:checked ~ #mehr_label {
-  visibility: hidden;
-}
-#mehr_check:checked ~ .uebermich {
-  padding-top: 50px;
+  display: none;
 }
 
 .gallery {
@@ -624,7 +566,65 @@ blockquote::after {
     object-position: 0% 10%;
   }
 
+  #mehr_label {
+    top: 2000px;
+    z-index: 999;
+  }
+  #mehr_text {
+    margin-bottom: 0.3rem;
+  }
+  #mehr_label,
+  #weniger_label {
+    position: relative;
+    margin: 1%;
+    align-self: center;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #mehr_label:hover,
+  #weniger_label:hover {
+    color: var(--taenzle-rose);
+    transition: color 300ms ease-in-out;
+  }
+  #mehr_label:hover > svg,
+  #weniger_label:hover > svg {
+    fill: var(--taenzle-rose);
+    transition: fill 300ms ease-in-out;
+  }
+  #uparrow,
+  #downarrow {
+    max-height: 1.8rem;
+  }
+  #weniger_text {
+    margin-top: 1rem;
+  }
+  #mehr_check:not(:checked) ~ .eindruecke {
+    height: 2000px;
+    margin-bottom: 120px;
+    overflow: hidden;
+    mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.7) 95%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  #mehr_check:checked ~ .eindruecke {
+    mask: unset;
+  }
+  #mehr_check:checked ~ #mehr_label {
+    visibility: hidden;
+  }
+  #mehr_check:checked ~ .uebermich {
+    padding-top: 50px;
+  }
+
   #uebermich-graphic-mobile {
+    margin-top: 10px;
     display: initial;
     width: 100%;
     max-width: 650px;
@@ -684,9 +684,10 @@ blockquote::after {
     width: 100%;
   }
   blockquote {
+    left: 0px;
     margin-top: 8%;
     margin-bottom: 7%;
-    font-size: clamp(0.9rem, 3.8vw, 2.3rem);
+    font-size: clamp(0.9rem, 4.2vw, 2.3rem);
   }
   blockquote::before,
   blockquote::after {

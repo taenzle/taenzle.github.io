@@ -15,12 +15,14 @@
           .querySelector("#mehr_check")
           .addEventListener("change", function () {
             if (!this.checked) {
-              console.log("test");
-              document.querySelector(".eindruecke").scrollIntoView({
-                behavior: "smooth",
+              let eindruecke = document.querySelector(".uebermich");
+              eindruecke.style["scroll-margin-top"] = "200px"
+              eindruecke.scrollIntoView({
+                behavior: "instant",
                 block: "start",
                 inline: "nearest",
               });
+              eindruecke.style["scroll-margin-top"] = "initial"
             }
           });
       });
@@ -90,7 +92,7 @@
         </div>
       </div>
     </section>
-    <section class="angebote" id="angebote">
+    <section class="angg" id="angebote">
       <h2>Angebote</h2>
       <div>
         <div class="angebot">
@@ -222,8 +224,7 @@
           id="uparrow"
           viewBox="7 8 10 7"
           fill="whitesmoke"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none">
+          xmlns="http://www.w3.org/2000/svg">
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
