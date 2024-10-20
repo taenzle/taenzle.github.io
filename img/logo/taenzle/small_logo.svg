@@ -6,9 +6,10 @@
       --taenzle-rose: rgb(255, 194, 210);
     }
 
-    svg {
-      background-color: var(--taenzle-gray);
-      border-radius: 100%;
+
+    rect {
+      fill: var(--taenzle-gray);
+      border-radius: 5px 10px 5px 10px / 10px 5px 10px 5px;
     }
 
     .main {
@@ -21,6 +22,7 @@
       fill: var(--taenzle-rose);
     }
   </style>
+  <rect rx="70" ry="70" x="0" y="0" height="600" width="600" />
   <symbol id="logo" width="100%" height="100%" viewBox="0 0 1365 2048">
     <path id="body" d="M 347.00,230.62
            C 347.00,230.62 350.50,226.38 359.00,230.62
