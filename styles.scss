@@ -36,7 +36,7 @@ body {
 /* HEADER */
 header {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 4fr 2fr;
   align-items: center;
   justify-items: center;
   padding: 30px 2% 50px;
@@ -45,7 +45,7 @@ header {
   color: whitesmoke;
   font-size: 2rem;
   nav {
-    grid-column: 2 / 4;
+    grid-column: 2;
   }
   b {
     position: relative;
@@ -71,9 +71,10 @@ h2 {
 }
 .socials {
   display: flex;
-  grid-column: 4;
+  position: relative;
+  right: 30px;
+  grid-column: 3;
   justify-content: flex-end;
-  right: 20px;
   gap: 2px;
   padding: 0% 3vw 0% 0%;
   width: 100%;
@@ -424,9 +425,10 @@ footer {
 
     .socials {
       position: relative;
+      right: unset;
       bottom: 8px;
       justify-content: flex-end;
-      padding-right: 0;
+      padding: unset;
       width: unset;
       a {
         all: unset;
