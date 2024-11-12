@@ -72,9 +72,10 @@ h2 {
 .socials {
   display: flex;
   grid-column: 4;
-  justify-content: center;
+  justify-content: flex-end;
+  right: 20px;
   gap: 2px;
-  padding: 0% 1vw 0% 0%;
+  padding: 0% 3vw 0% 0%;
   width: 100%;
   a {
     display: flex;
