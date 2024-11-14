@@ -5,6 +5,10 @@ $taenzle-nav: rgba(177, 174, 174, 0.423);
 * {
   box-sizing: border-box;
 }
+::selection {
+  color: $taenzle-gray;
+  background: $taenzle-rose;
+}
 html {
   height: 100%j;
 }

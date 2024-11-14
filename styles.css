@@ -2,6 +2,16 @@
   box-sizing: border-box;
 }
 
+::-moz-selection {
+  color: rgb(103, 110, 120);
+  background: rgb(255, 194, 210);
+}
+
+::selection {
+  color: rgb(103, 110, 120);
+  background: rgb(255, 194, 210);
+}
+
 html {
   height: 100% j;
 }
