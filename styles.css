@@ -387,13 +387,16 @@ footer blockquote::before, footer blockquote::after {
     all: unset;
     position: absolute;
     top: 65px;
-    /* top: clamp(120px, 23px + 17vw, 130px); */
     right: 0px;
     left: 0px;
-    /* border-top: $taenzle-rose solid 2px; */
     box-shadow: 0 -2.8px 2.2px rgba(0, 0, 0, 0.034), 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072);
     background-color: rgba(177, 174, 174, 0.423);
     color: whitesmoke;
+  }
+  header nav li a {
+    width: -moz-max-content;
+    width: max-content;
+    margin: auto;
   }
   header .logo {
     all: unset;

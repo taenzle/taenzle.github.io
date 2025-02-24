@@ -374,10 +374,8 @@ footer {
       all: unset;
       position: absolute;
       top: 65px;
-      /* top: clamp(120px, 23px + 17vw, 130px); */
       right: 0px;
       left: 0px;
-      /* border-top: $taenzle-rose solid 2px; */
       box-shadow:
         0 -2.8px 2.2px rgba(0, 0, 0, 0.034),
         0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -386,6 +384,13 @@ footer {
         0 22.3px 17.9px rgba(0, 0, 0, 0.072);
       background-color: $taenzle-nav;
       color: whitesmoke;
+      li {
+        a {
+          width: max-content;
+          margin: auto;
+        }
+
+      }
     }
 
     .logo {
