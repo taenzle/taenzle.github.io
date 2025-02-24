@@ -104,33 +104,35 @@ h2 {
   padding-left: 0px;
   list-style: none;
   white-space: nowrap;
-}
-.front-button {
-  position: relative;
-  cursor: pointer;
-  color: whitesmoke;
-  font-size: clamp(1rem, 2vw, 2rem);
-  text-decoration: none;
-}
-.front-button::after {
-  display: block;
-  position: relative;
-  top: 5px;
-  right: 0px;
-  left: 0px;
-  transform: scale(0, 1);
-  transition: transform 400ms ease-in-out;
-  margin: 0px 2%;
-  background-color: $taenzle-rose;
-  min-height: 2px;
-  content: "";
-}
-.front-button:hover {
-  transition: color 400ms ease-in-out;
-  color: $taenzle-rose;
-}
-.front-button:hover::after {
-  transform: scale(1, 1);
+  li {
+    a {
+      position: relative;
+      cursor: pointer;
+      color: whitesmoke;
+      font-size: clamp(1rem, 2vw, 2rem);
+      text-decoration: none;
+    }
+    ::after {
+      display: block;
+      position: relative;
+      top: 5px;
+      right: 0px;
+      left: 0px;
+      transform: scale(0, 1);
+      transition: transform 400ms ease-in-out;
+      margin: 0px 2%;
+      background-color: $taenzle-rose;
+      min-height: 2px;
+      content: "";
+    }
+    :hover {
+      transition: color 400ms ease-in-out;
+      color: $taenzle-rose;
+    }
+    :hover::after {
+      transform: scale(1, 1);
+    }
+  }
 }
 
 footer {
@@ -406,23 +408,19 @@ footer {
       grid-template-columns: repeat(3, 1fr);
       gap: 3vw;
       li {
-        display: block;
-        align-content: baseline;
-        padding: max(10px, 1vw);
-      }
-      .front-button {
-        all: unset;
-        display: block;
-        align-content: center;
-        height: 100%;
-        font-size: clamp(0.7rem, 4vw, 1.5rem);
-        text-align: center;
-        &::after {
-          display: none;
-        }
-        &:hover {
-          transition: unset;
-          color: unset;
+        a {
+          display: block;
+          align-content: baseline;
+          padding: max(10px, 1vw);
+          font-size: clamp(0.7rem, 4vw, 1.5rem);
+          text-align: center;
+          &::after {
+            display: none;
+          }
+          &:hover {
+            transition: unset;
+            color: unset;
+          }
         }
       }
     }

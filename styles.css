@@ -114,16 +114,14 @@ h2 {
   list-style: none;
   white-space: nowrap;
 }
-
-.front-button {
+.front-buttons li a {
   position: relative;
   cursor: pointer;
   color: whitesmoke;
   font-size: clamp(1rem, 2vw, 2rem);
   text-decoration: none;
 }
-
-.front-button::after {
+.front-buttons li ::after {
   display: block;
   position: relative;
   top: 5px;
@@ -136,13 +134,11 @@ h2 {
   min-height: 2px;
   content: "";
 }
-
-.front-button:hover {
+.front-buttons li :hover {
   transition: color 400ms ease-in-out;
   color: rgb(255, 194, 210);
 }
-
-.front-button:hover::after {
+.front-buttons li :hover::after {
   transform: scale(1, 1);
 }
 
@@ -419,23 +415,17 @@ footer blockquote::before, footer blockquote::after {
     grid-template-columns: repeat(3, 1fr);
     gap: 3vw;
   }
-  header .front-buttons li {
+  header .front-buttons li a {
     display: block;
     align-content: baseline;
     padding: max(10px, 1vw);
-  }
-  header .front-buttons .front-button {
-    all: unset;
-    display: block;
-    align-content: center;
-    height: 100%;
     font-size: clamp(0.7rem, 4vw, 1.5rem);
     text-align: center;
   }
-  header .front-buttons .front-button::after {
+  header .front-buttons li a::after {
     display: none;
   }
-  header .front-buttons .front-button:hover {
+  header .front-buttons li a:hover {
     transition: unset;
     color: unset;
   }
