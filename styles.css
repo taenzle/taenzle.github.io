@@ -82,6 +82,7 @@ h2 {
 
 .socials {
   display: flex;
+  flex-direction: row;
   position: relative;
   right: 30px;
   grid-column: 3;
@@ -92,16 +93,9 @@ h2 {
 }
 .socials a {
   display: flex;
-  align-items: center;
-  height: 2em;
-  height: clamp(24px, 8vw, 140px);
-  min-height: 80px;
-  max-height: 144px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .socials a img {
-  height: 30%;
+  height: clamp(14px, 2.8vw, 48px);
 }
 
 .front-buttons {
@@ -430,22 +424,14 @@ footer blockquote::before, footer blockquote::after {
     color: unset;
   }
   header .socials {
-    position: relative;
     right: unset;
     bottom: 8px;
-    justify-content: flex-end;
     padding: unset;
     width: unset;
   }
-  header .socials a {
-    all: unset;
-    display: flex;
-    height: clamp(14px, 5.5vw, 24px);
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
   header .socials a img {
     height: 100%;
+    height: clamp(14px, 5.5vw, 24px);
   }
   .intro {
     justify-content: center;
