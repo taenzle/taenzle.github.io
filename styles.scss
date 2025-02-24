@@ -131,7 +131,7 @@ h2 {
 footer {
   display: flex;
   justify-content: center;
-  padding: 100px 2% 50px;
+  padding: 0px 2% 50px;
   width: 100%;
   max-width: 1440px;
   blockquote {
@@ -222,9 +222,6 @@ footer {
   align-items: center;
   padding-right: 2%;
   padding-left: 2%;
-  #uebermich-graphic-mobile {
-    display: none;
-  }
   .uebermich-portrait {
     display: inherit;
     flex-direction: inherit;
@@ -272,6 +269,14 @@ footer {
       + .cv-column {
         align-items: flex-start;
       }
+    }
+  }
+  #uebermich-graphic-container {
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    img {
+      max-height: 450px;
     }
   }
 }
@@ -389,7 +394,6 @@ footer {
           width: max-content;
           margin: auto;
         }
-
       }
     }
 
@@ -464,10 +468,13 @@ footer {
   }
 
   .uebermich {
-    #uebermich-graphic-mobile {
-      display: initial;
-      width: 100%;
-      max-width: 650px;
+    #uebermich-graphic-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 65%;
+      }
     }
     .uebermich-portrait {
       align-items: center;

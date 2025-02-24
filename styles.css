@@ -137,7 +137,7 @@ h2 {
 footer {
   display: flex;
   justify-content: center;
-  padding: 100px 2% 50px;
+  padding: 0px 2% 50px;
   width: 100%;
   max-width: 1440px;
 }
@@ -227,9 +227,6 @@ footer blockquote::before, footer blockquote::after {
   padding-right: 2%;
   padding-left: 2%;
 }
-.uebermich #uebermich-graphic-mobile {
-  display: none;
-}
 .uebermich .uebermich-portrait {
   display: inherit;
   flex-direction: inherit;
@@ -280,6 +277,14 @@ footer blockquote::before, footer blockquote::after {
 }
 .uebermich .uebermich-cv .cv-column + .cv-column {
   align-items: flex-start;
+}
+.uebermich #uebermich-graphic-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+}
+.uebermich #uebermich-graphic-container img {
+  max-height: 450px;
 }
 
 /* EINDRUECKE */
@@ -461,10 +466,13 @@ footer blockquote::before, footer blockquote::after {
   .intro .title-image .intro-text h1 {
     margin: 0px;
   }
-  .uebermich #uebermich-graphic-mobile {
-    display: initial;
-    width: 100%;
-    max-width: 650px;
+  .uebermich #uebermich-graphic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .uebermich #uebermich-graphic-container img {
+    width: 65%;
   }
   .uebermich .uebermich-portrait {
     align-items: center;
