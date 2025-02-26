@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "node-html-parser": "^6.1.13"
+  },
+  "type": "module",
+  "devDependencies": {
+    "prettier": "3.5.2"
+  }
+}
