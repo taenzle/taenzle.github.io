@@ -1,12 +1,13 @@
-$taenzle-gray: rgb(103, 110, 120);
+$taenzle-bg: rgb(103, 110, 120);
 $taenzle-rose: rgb(255, 194, 210);
 $taenzle-nav: rgba(177, 174, 174, 0.423);
+$taenzle-fg: whitesmoke;
 
 * {
   box-sizing: border-box;
 }
 ::selection {
-  color: $taenzle-gray;
+  color: $taenzle-bg;
   background: $taenzle-rose;
 }
 html {
@@ -18,9 +19,9 @@ body {
   align-items: center;
   box-sizing: border-box;
   margin: 0;
-  background-color: $taenzle-gray;
+  background-color: $taenzle-bg;
   padding: 0;
-  color: whitesmoke;
+  color: $taenzle-fg;
   font-family: Arial, sans-serif;
   section {
     padding: 30px 10%;
@@ -101,7 +102,7 @@ h2 {
     a {
       position: relative;
       cursor: pointer;
-      color: whitesmoke;
+      color: $taenzle-fg;
       font-size: clamp(1rem, 2vw, 2rem);
       text-decoration: none;
     }
@@ -129,6 +130,7 @@ h2 {
 }
 
 footer {
+  background-color: $taenzle-nav;
   display: flex;
   justify-content: center;
   padding: 0px 2% 50px;
@@ -201,7 +203,7 @@ footer {
           li {
             padding-bottom: 5px;
             a {
-              color: whitesmoke;
+              color: $taenzle-fg;
               text-decoration: none;
             }
             &:hover {
@@ -388,7 +390,7 @@ footer {
         0 12.5px 10px rgba(0, 0, 0, 0.06),
         0 22.3px 17.9px rgba(0, 0, 0, 0.072);
       background-color: $taenzle-nav;
-      color: whitesmoke;
+      color: $taenzle-fg;
       li {
         a {
           width: max-content;
