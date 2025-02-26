@@ -130,35 +130,20 @@ h2 {
 }
 
 footer {
-  background-color: $taenzle-nav;
-  display: flex;
-  justify-content: center;
-  margin-top: 150px;
-  padding: 0px 2% 50px;
+  max-width: 2000px;
   width: 100%;
-  blockquote {
-    position: relative;
-    margin: 11% 10%;
-    padding: 0;
-    font-style: italic;
-    font-size: clamp(0.9rem, 3vw, 2.2rem);
-    &::before {
-      bottom: 40%;
-      left: -20%;
-      content: open-quote;
-    }
-    &::after {
-      top: -20%;
-      right: -20%;
-      content: close-quote;
-    }
-    &::before,
-    &::after {
-      position: absolute;
-      color: $taenzle-rose;
-      font-size: clamp(0.9rem, 10vw, 9rem);
-      line-height: 1.618;
-      text-align: center;
+    padding: 30px 10%;
+  div {
+    display: flex;
+    flex-direction: column;
+    #kontakt {
+      display: flex;
+      flex-direction: column;
+      #kontakt-socials {
+        img {
+          max-height: 30px;
+        }
+      }
     }
   }
 }
@@ -190,28 +175,6 @@ footer {
         max-width: 90%;
         font-size: 1.3rem;
         text-align: left;
-      }
-      .kontakt {
-        font-size: 1.1rem;
-        text-align: end;
-        h2 {
-          margin-bottom: 0px;
-        }
-        ul {
-          padding-left: 0px;
-          list-style: none;
-          li {
-            padding-bottom: 5px;
-            a {
-              color: $taenzle-fg;
-              text-decoration: none;
-            }
-            &:hover {
-              cursor: pointer;
-              text-decoration: underline;
-            }
-          }
-        }
       }
     }
   }
