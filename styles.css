@@ -138,9 +138,9 @@ footer {
   background-color: rgba(177, 174, 174, 0.423);
   display: flex;
   justify-content: center;
+  margin-top: 150px;
   padding: 0px 2% 50px;
   width: 100%;
-  max-width: 1440px;
 }
 footer blockquote {
   position: relative;
@@ -514,9 +514,6 @@ footer blockquote::before, footer blockquote::after {
     padding-left: 0px;
     direction: rtl;
     text-align: right;
-  }
-  #uebermich-footer {
-    padding-top: 0px;
   }
   /* ANGEBOTE */
   .angebote > div {

@@ -133,9 +133,9 @@ footer {
   background-color: $taenzle-nav;
   display: flex;
   justify-content: center;
+  margin-top: 150px;
   padding: 0px 2% 50px;
   width: 100%;
-  max-width: 1440px;
   blockquote {
     position: relative;
     margin: 11% 10%;
@@ -518,9 +518,6 @@ footer {
         }
       }
     }
-  }
-  #uebermich-footer {
-    padding-top: 0px;
   }
 
   /* ANGEBOTE */
