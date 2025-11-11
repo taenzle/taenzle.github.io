@@ -1,88 +1,147 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tänzle</title>
     <link rel="icon" href="/img/logo/taenzle/small_logo.ico" />
-    <link rel="stylesheet" href="/styles.css" >
+    <link rel="stylesheet" href="/styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-      const add_to_gallery = (eindruecke) => {
-        let gallery = document.getElementById("gallery");
-        let template = document.querySelector("#eindruck-template");
-        for (const e of eindruecke) {
-          let clone = template.content.cloneNode(true);
-          clone.querySelector(".eindruck-titel").textContent = e["text"];
-          clone.querySelector("img").src = e["image"];
-          clone.querySelector(".eindruck-datum").textContent = e["date"];
-          gallery.appendChild(clone);
-        }
-      };
-
-      fetch("/eindruecke.json")
-        .then((res) => {
-          return res.text();
-        })
-        .then((eindruecke) => {
-          const e = JSON.parse(eindruecke);
-          return add_to_gallery(e);
-        });
-    </script>
   </head>
+
   <body>
     <header>
       <div class="logo">
         <a href="/index.html">
-          <img             src="/img/logo/taenzle/white_shadow_outline.svg"
-            alt="Tänzle Logo" >
+          <img
+            src="/img/logo/taenzle/white_shadow_outline.svg"
+            alt="Tänzle Logo"
+          />
         </a>
       </div>
 
       <nav>
         <ul class="front-buttons">
           <li>
-            <a href="/sections/uebermich.html" class="front-button">Über mich</a>
+            <a href="/sections/uebermich.html" class="front-button"
+              >Über mich</a
+            >
           </li>
           <li>
             <a href="/sections/angebote.html" class="front-button"
-              >Meine Angebote</a>
+              >Meine Angebote</a
+            >
           </li>
           <li>
-            <a href="/sections/eindruecke.html" class="front-button">Eindrücke</a>
+            <a href="/sections/eindruecke.html" class="front-button"
+              >Eindrücke</a
+            >
           </li>
         </ul>
       </nav>
 
       <div class="socials">
-        <a           href="https://www.linkedin.com/in/alana-brown-67a308263/"
+        <a
+          href="https://www.linkedin.com/in/alana-brown-67a308263/"
           target="_blank"
           rel="noopener noreferrer"
           ><img src="/img/logo/linkedin/LI-In-Bug-White.png" alt="Instagram"
-        ></a>
-        <a           href="https://www.instagram.com/taenzle_/"
+        /></a>
+        <a
+          href="https://www.instagram.com/taenzle_/"
           target="_blank"
           rel="noopener noreferrer"
-          ><img             src="/img/logo/instagram/01 Static Glyph/02 White Glyph/Instagram_Glyph_White.svg"
+          ><img
+            src="/img/logo/instagram/01 Static Glyph/02 White Glyph/Instagram_Glyph_White.svg"
             alt="Instagram"
-        ></a>
+        /></a>
       </div>
     </header>
 
     <section class="eindruecke">
       <h2>Eindrücke</h2>
-      <div class="gallery" id="gallery">
-        <template id="eindruck-template">
-          <figure>
-            <figcaption>
-              <h3 class="eindruck-titel"></h3>
-              <p class="eindruck-datum"></p>
-            </figcaption>
-            <img src="" >
-          </figure>
-        </template>
+
+      <div id="gallery" class="gallery" >
+        
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel">Tanzworkshop mit der Jubla Niederwil</h3>
+            <p class="eindruck-datum">Juli 2023</p>
+          </figcaption>
+          <img src="/img/eindruecke/jubla_niederwil.jpg" />
+        </figure>
+        
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel">Bewegungsworkshop in Zug</h3>
+            <p class="eindruck-datum">Juli 2023</p>
+          </figcaption>
+          <img src="/img/eindruecke/zug_juli.jpg" />
+        </figure>
+        
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel">Schulsport in Villmergen</h3>
+            <p class="eindruck-datum">Oktober / November 2023</p>
+          </figcaption>
+          <img src="/img/eindruecke/villmergen.png" />
+        </figure>
+        
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel">Projekttage mit der HPS Wohlen</h3>
+            <p class="eindruck-datum">April 2024</p>
+          </figcaption>
+          <img src="/img/eindruecke/hps.jpg" />
+        </figure>
+        
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel">Tanzshow für den Tanzlade Wohlen</h3>
+            <p class="eindruck-datum">Jährlich im März seit 2023</p>
+          </figcaption>
+          <img src="/img/eindruecke/tanzshow.jpg" />
+        </figure>
+        
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel">Projektwoche im Mühlematten</h3>
+            <p class="eindruck-datum">April 2024</p>
+          </figcaption>
+          <img src="/img/eindruecke/muehlematten.jpg" />
+        </figure>
+        
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel">Bewegungsworkshop in Zug</h3>
+            <p class="eindruck-datum">Mai 2024</p>
+          </figcaption>
+          <img src="/img/eindruecke/zug_mai.jpg" />
+        </figure>
+        
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel">Competition mit der Streethoppers Crew</h3>
+            <p class="eindruck-datum">Mai 2024</p>
+          </figcaption>
+          <img src="/img/eindruecke/competition.jpg" />
+        </figure>
+        
       </div>
+      <!-- <div class="gallery" id="gallery"> -->
+      <!--   <template id="eindruck-template"> -->
+      <!--     <figure> -->
+      <!--       <figcaption> -->
+      <!--         <h3 class="eindruck-titel"></h3> -->
+      <!--         <p class="eindruck-datum"></p> -->
+      <!--       </figcaption> -->
+      <!--       <img src="" /> -->
+      <!--     </figure> -->
+      <!--   </template> -->
+      <!-- </div> -->
     </section>
-    <footer><blockquote>Tänzle als wür niemer luege!</blockquote></footer>
+    <footer>
+      <blockquote>Tänzle als wür niemer luege!</blockquote>
+    </footer>
   </body>
 </html>

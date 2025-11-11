@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tänzle</title>
+    <link rel="icon" href="/img/logo/taenzle/small_logo.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="/index.html">
+          <img
+            src="/img/logo/taenzle/white_shadow_outline.svg"
+            alt="Tänzle Logo"
+          />
+        </a>
+      </div>
+
+      <nav>
+        <ul class="front-buttons">
+          <li>
+            <a href="/sections/uebermich.html" class="front-button"
+              >Über mich</a
+            >
+          </li>
+          <li>
+            <a href="/sections/angebote.html" class="front-button"
+              >Meine Angebote</a
+            >
+          </li>
+          <li>
+            <a href="/sections/eindruecke.html" class="front-button"
+              >Eindrücke</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="socials">
+        <a
+          href="https://www.linkedin.com/in/alana-brown-67a308263/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img src="/img/logo/linkedin/LI-In-Bug-White.png" alt="Instagram"
+        /></a>
+        <a
+          href="https://www.instagram.com/taenzle_/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            src="/img/logo/instagram/01 Static Glyph/02 White Glyph/Instagram_Glyph_White.svg"
+            alt="Instagram"
+        /></a>
+      </div>
+    </header>
+
+    <section class="eindruecke">
+      <h2>Eindrücke</h2>
+
+      <div id="gallery" class="gallery" >
+        <% items.forEach(item => { %>
+        <figure>
+          <figcaption>
+            <h3 class="eindruck-titel"><%= item.text %></h3>
+            <p class="eindruck-datum"><%= item.date %></p>
+          </figcaption>
+          <img src="<%= item.image %>" />
+        </figure>
+        <% }) %>
+      </div>
+      <!-- <div class="gallery" id="gallery"> -->
+      <!--   <template id="eindruck-template"> -->
+      <!--     <figure> -->
+      <!--       <figcaption> -->
+      <!--         <h3 class="eindruck-titel"></h3> -->
+      <!--         <p class="eindruck-datum"></p> -->
+      <!--       </figcaption> -->
+      <!--       <img src="" /> -->
+      <!--     </figure> -->
+      <!--   </template> -->
+      <!-- </div> -->
+    </section>
+    <footer>
+      <blockquote>Tänzle als wür niemer luege!</blockquote>
+    </footer>
+  </body>
+</html>
